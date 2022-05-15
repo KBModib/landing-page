@@ -142,14 +142,71 @@ padding-right: 12px;
     grid-area: "card-6";
     grid-column: 2/6;
     grid-row: 5/8;
-    background-color: #f000bc;
+    background-color: #FBF9F5;
+    justify-items: center;
+    align-items: flex-start;
+    margin:center;
+    margin-bottom: 0px;
+    
 }
+.new-cover {
+        border-radius: 10px;
+}
+.book-title {
+        font-family: 'Roboto', serif;
+        font-size: 12pt;
+        font-weight: bold;
+        margin: 75px;
+       
+}
+.author-new {
+        font-family: 'Roboto', serif;
+        font-size: 11pt;
+        font-weight: lighter;
+        padding-bottom: 10px;
+}
+    .genre-button {
+        border: 1px solid;
+        border-color: #b8b7b7 ;
+        border-radius: 30px;
+        background-color: #b8b7b7;
+        font-family: 'Roboto', serif;
+        font-size: 10pt;
+        font-weight: 600;
+        -webkit-text-fill-color: #363636;
+}
+.heading {
+        font-family: 'Roboto', serif;
+        font-size: 12pt;
+        font-weight: bold;
+}
+
 .author-list {
     grid-area: "card-7";
     grid-column: 6/8;
     grid-row: 5/8;
-    background-color: #82dcec;
+    background-color: #c0bfbe;
+    border: 1px solid;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-color: #c0bfbe;
+    margin-top: 15px;
+    padding-top: 25px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
+    font-size: 11pt;
 }
+.author-list-table {
+    margin-top: 5px;
+    padding-left: 25px;
+}
+.author-list-table img {
+    border: 1px solid #c0bfbe;
+    border-radius: 80%;
+    width: 60px;
+}
+
  /**styling for login form**/
 
  .forms {
