@@ -1,4 +1,4 @@
-// js  for login forms 
+// js  for login forms data
 var objUsers = [
     {
         username: "amahle",
@@ -17,15 +17,16 @@ var objUsers = [
     }
 ];
 function getInfo(){
+
     var username = document.getElementsByClassName("username")[0].value;
     var password = document.getElementsByClassName("password")[0].value;
 
     for(i = 0; i < objUsers.length; i++) {
         if(username == objUsers[i].username && password == objUsers[i].password) {
-            window.location.href = "index.html";
+            window.location.href = "landing-page.html";
             return;
        } else if(username == objUsers[i].email && password == objUsers[i].password){
-            window.location.href = "index.html";
+            window.location.href = "landing-page.html";
             return;
        }
     }
@@ -33,10 +34,10 @@ function getInfo(){
     alert("incorrect username or password");
 }
 
-
 // js  for registration form
 
 function validateForm() {
+
     var fname = document.getElementById("username").value;
     var lname = document.getElementById("lastname").value;
     var email = document.getElementById("email-reg").value;
@@ -60,11 +61,22 @@ function validateForm() {
                 password: pass
             },
         )
-        window.location.href = "index.html"; 
+        window.location.href = "landing-page.html"; 
     } 
         else {
         alert("password does not match");
         return;
     }
 }
-  
+
+//Save object in storage
+function save() {
+
+    let loginData = {
+        fname: document.getElementById("username").value,
+        email: document.getElementById("email-reg").value,
+        pass: document.getElementById("reg-password").value,
+    }
+    localStorage.setItem("loginData", JSON.stringify(loginData));
+    console.log(localStorage.getItem("loginData"));
+}

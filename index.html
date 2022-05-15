@@ -1,234 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="decription" content="kindle-library-landing-page HTML,CSS,JavaScript">
-    <meta name="author" content="K Modibedi">
-    <title>Kindle Library-User</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="decription" content="kindle-library-login HTML,CSS,JavaScript">
+        <meta name="author" content="K Modibedi">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
-
-</head>
-<body>
-    <main class="grid-container">
-        <div class="profile-container">
-            <img src="/images/profile-pic.jpg" alt="profile picture" class="profile-container-image">
-                <p id="profile-text">Welcome<br>Back</p>
-                <h1 id="profile-text">Sarah</h1>
-        </div>
-        <nav class="nav-container">
-            <ul>
-                <li><img src="/images/kindle-board-icon.png" width="35px" alt="icon" class="nav-icon">My Kindle Board</li>
-                <li><img src="/images/icons8-big-parcel-16.png" width="25px" alt="icon" class="nav-icon">Collections</li>
-                <li><img src="/images/bookmark.svg" width="20px" alt="icon" class="nav-icon">Saved</li>
-                <li><img src="/images/user.svg" width="20px" alt="icon" class="nav-icon">Profile</li>
-                <li><img src="/images/logout_icon_183923.svg" width="20px" alt="icon" class="nav-icon">Logout</li>
-            </ul>
-        </nav>
-        <div class="logo">
-            <img src="/images/prod of amazon logo.png" alt="Product of Amazon" class="logo">
-        </div>
-        <table class="top-right">
-            <table class="top-right">
-                <tr>
-                    <td><img src="/images/kindle logo.png"  width="80px" align=left alt="kindle-logo" class="kindle-logo"></td>
-                    <td class="link-right" align="right">
-                        <a href="#" class="search-box">
-                            <input type="text" placeholder="Search your books" class="search">
-                           <img src="/images/search-icon.jpg" class="search-button" width="12px"/>
-                        </a>
-                        <a href="#new-release">New Release<sup class="sup">.</sup></a>
-                        <a href="featured">Featured</a>
-                        <img src="/images/apps.svg" width="10px" alt="icon">
-                    </td> 
-                </tr>    
-        </table>
-        </table>
-        <div class="booklist">
-            <h3 id="scrollRecentitle"> Books you read last</h3>
-            <div class="rowImagecontainer">
-                <div class="columnSlidefade">
-                    <font size="-1">
-                        <h3>The Paper Palace</h3>
-                        <p>
-                            191 Page - Chapter 4 - Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover">
-                        <img src="/images/byrl-1.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer1">
-                <div class="columnSlidefade1">
-                    <font size="-1">
-                        <h3>Queenie</h3>
-                        <p>
-                            82 Page - Chapter 3 - Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover1">
-                        <img src="/images/byrl-2.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer2">
-                <div class="columnSlidefade2">
-                    <font size="-1">
-                        <h3>The Lord Of The Rings</h3>
-                        <p>
-                            362 Page Chapter 9 Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover2">
-                        <img src="/images/byrl-3.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer3">
-                <div class="columnSlidefade3">
-                    <font size="-1">
-                        <h3>To Kill A Mockingbird</h3>
-                        <p>
-                           Complete - Favourite
-                        </p>
-                    </font>
-                    <div id="bookCover3">
-                        <img src="/images/byrl-4.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer4">
-                <div class="columnSlidefade4">
-                    <font size="-1">
-                        <h3>The Hacienda</h3>
-                        <p>
-                            New purchase - Yet to read
-                        </p>
-                    </font>
-                    <div id="bookCover4">
-                        <img src="/images/byrl-5.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer5">
-                <div class="columnSlidefade5">
-                    <font size="-1">
-                        <h3>Trust</h3>
-                        <p>
-                            New purchase - Yet to read
-                        </p>
-                    </font>
-                    <div id="bookCover5">
-                        <img src="/images/byrl-6.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer6">
-                <div class="columnSlidefade6">
-                    <font size="-1">
-                        <h3> Forecasting: Principles and Practic</h3>
-                        <p>
-                            61 Page - Chapter 3 - Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover6">
-                        <img src="/images/byrl-7.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer7">
-                <div class="columnSlidefade7">
-                    <font size="-1">
-                        <h3>Little Sister</h3>
-                        <p>
-                            124 Page - Chapter 5 - Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover7">
-                        <img src="/images/byrl-8.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer8">
-                <div class="columnSlidefade8">
-                    <font size="-1">
-                        <h3>Okoye: To The People</h3>
-                        <p>
-                            70 Page - Chapter 3 - Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover8">
-                        <img src="/images/byrl-9.jpg">
-                    </div>
-                </div>
-            </div>
-            <div class="rowImagecontainer9">
-                <div class="columnSlidefade9">
-                    <font size="-1">
-                        <h3>The Invisible Kingdom: Reimagining Chronic Illness</h3>
-                        <p>
-                            18 Page - Chapter 1  - Last Read
-                        </p>
-                    </font>
-                    <div id="bookCover9">
-                        <img src="/images/byrl-10.jpg">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <table class="new-books">
-            <table class="new-books">
-                <tr> <td colspan="5" class="heading"><h3>New Release</h3></td>
-               </tr>
-                <tr align="center">
-                    <td><img class="new-cover" src="/images/book-1 cover.jpg" width="91px" alt="icon"></td>
-                    <td><img class="new-cover" src="/images/book-2 cover.jpg" width="91px" alt="icon"></td>
-                    <td><img class="new-cover" src="/images/book-3 cover.jpg" width="91px" alt="icon"></td>
-                    <td><img class="new-cover" src="/images/book-4 cover.jpg" width="91px" alt="icon"></td>
-                    <td><img class="new-cover" src="/images/book-5 cover.jpg" width="91px" alt="icon"></td>
-                 </tr>
-                <tr align="justify center">
-                    <td class="book-title"><h5>Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h6></td>
-                    <td class="book-title"><h5>Finding Me: A Memoir</h6></td>
-                    <td class="book-title"><h5>This Will Not Pass: Trump, Biden, and the Battle for America's Future</h6></td>
-                    <td class="book-title"><h5>22 Seconds (Women's Murder Club, 22)</h6></td>
-                    <td class="book-title"><h5>Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h6></td>
-                </tr>
-                <tr align="justify">
-                    <td class="author-new"><p>Steven Rinella</p></td>
-                    <td class="author-new"><p>Viola Davis</p></td>
-                    <td class="author-new"><p>Jonathan Martin</p></td>
-                    <td class="author-new"><p>James Patterson</p></td>
-                    <td class="author-new"><p>Dav Pilkey</p></td> 
-                </tr>
-                <tr align="justify">
-                    <td><button type="button" class="genre-button">Parenting</button></td>
-                    <td><button type="button" class="genre-button">Biographies</button></td>
-                    <td><button type="button" class="genre-button">Politics</button></td>
-                    <td><button type="button" class="genre-button">Thriller</button></td>
-                    <td><button type="button" class="genre-button">Children's</button></td>
-                </tr>    
-        </table>
-        </table>
-        <aside class="author-list">
-            <table class="author-list-table">
-                <tr><td colspan="2" class="heading"><h3>Famous Authors</h3></td></tr>
-                <tr><td><img src="/images/author-1.jpg" width="60px" alt="icon"></td>
-                    <td><b>James Patterson</b><br>71 Books</td>
-                </tr>
-                <tr><td><img src="/images/author-2.jpg" width="60px" alt="icon"></td>
-                    <td><b>Danielle Steel</b><br>185 Books</td>
-                </tr>
-                <tr><td><img src="/images/author-3.jpg" width="60px" alt="icon"></td>
-                    <td><b>Candice Carty-Williams</b><br>5 Books</td></tr>
-            </table>
-        </aside>
-    </main>
-</body>
+        <title>Kindle Log-in</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <main class="login-register-background">
+            <span><img src="" alt="logo"></span>
+            <span><h1 class="heading-login">Login</h1></span>
+            <form action="" class="form-login" id="form-login">
+                <input type="alphanumeric" name="username" placeholder="Username" class="username" id="items" required>
+                <input type="alphanumeric" name="password" placeholder="Password" class="password" id="items" required>
+                <a href="" name="recovery" class="login-recovery">Click here for password recovery</a>
+                <button type="button" name="login" class="login-button"  onclick="getInfo()">Login</button>
+                <p class="login-reglink">No account? <a href="/register.html" class="link-register">Register</a> to build your very own digital library.</p>
+            </form>
+        </main>
+        <script type="text/javascript" src="/index.js"></script>
+    </body>
 </html>
