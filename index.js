@@ -68,7 +68,6 @@ function validateForm() {
         return;
     }
 }
-
 //Save object in storage
 function save() {
 
