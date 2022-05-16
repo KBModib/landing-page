@@ -618,3 +618,105 @@ padding-right: 12px;
 
     background-color: #110ae5ea;
 }
+/*reg form*/
+.form-login {
+    display: grid;
+    grid-template-rows: 100px repeat(7, 50px);
+    grid-template-areas: 
+    "item-1"
+    "item-2"
+    "item-3"
+    "item-4"
+    "item-5"
+    "item-6"
+    "item-7";
+    gap: 20px;
+
+    background-color: #ecc648ea;
+    border-radius: 30px;
+    opacity: 0.9;
+    margin: 100px 550px;
+    margin-bottom: 100px;
+    padding: 60px;
+    -webkit-text-fill-color: rgb(75, 50, 5);
+    position: fixed;
+    width: 400px;
+    max-width: 400px;
+    margin-bottom: 100px;
+    
+}
+.form-login h1{
+ align-self: center;
+}
+
+#items {
+    width: 400px;
+    border-radius: 30px;
+}
+.login-button{
+    margin-left: 150px;
+    margin-right: 550px; 
+    text-transform: capitalize;
+    border: 1px solid rgb(75, 50, 5);
+    position: relative;
+    border-radius: 10px;
+    
+}
+.login-button:hover {
+ background: rgb(75, 50, 5);
+ -webkit-text-fill-color: #ffffff;
+}
+/**styling for the registration form **/
+
+.form-reg {
+    display: grid;
+    grid-template-rows: 100px repeat(8, 50px);
+    grid-template-areas: 
+    "item-1"
+    "item-2"
+    "item-3"
+    "item-4"
+    "item-5"
+    "item-6"
+    "item-7"
+    "item-8";
+    gap: 20px;
+
+    background-color: #ecc648ea;
+    border-radius: 30px;
+    opacity: 0.9;
+    margin: 80px 550px;
+    margin-bottom: 80px;
+    padding: 60px;
+    -webkit-text-fill-color: rgb(49, 48, 48);
+    position: fixed;
+    width: 400px;
+    max-width: 400px;
+
+}
+.placeholder {
+    width: 400px;
+    border-radius: 30px;
+}
+.register {
+    margin-left: 150px;
+    margin-right: 550px; 
+    text-transform: capitalize;
+    border: 1px solid rgb(75, 50, 5);
+    position: relative;
+    border-radius: 10px;
+}
+.logo-login {
+    -webkit-text-fill-color: rgb(126, 104, 5);
+    font-size: 60px;
+    margin-bottom: 80px;
+    
+}
+.logo-login h1 {
+    align-self: center;
+}
+.register:hover {
+    background: rgb(75, 50, 5);
+    -webkit-text-fill-color: #ffffff;
+}
+ 
