@@ -1,4 +1,4 @@
-// js  for login forms 
+// js  for login forms data
 var objUsers = [
     {
         username: "amahle",
@@ -17,15 +17,16 @@ var objUsers = [
     }
 ];
 function getInfo(){
+
     var username = document.getElementsByClassName("username")[0].value;
     var password = document.getElementsByClassName("password")[0].value;
 
     for(i = 0; i < objUsers.length; i++) {
         if(username == objUsers[i].username && password == objUsers[i].password) {
-            window.location.href = "index.html";
+            window.location.href = "landing-page.html";
             return;
        } else if(username == objUsers[i].email && password == objUsers[i].password){
-            window.location.href = "index.html";
+            window.location.href = "landing-page.html";
             return;
        }
     }
@@ -36,6 +37,7 @@ function getInfo(){
 // js  for registration form
 
 function validateForm() {
+
     var fname = document.getElementById("username").value;
     var lname = document.getElementById("lastname").value;
     var email = document.getElementById("email-reg").value;
@@ -59,40 +61,21 @@ function validateForm() {
                 password: pass
             },
         )
-        window.location.href = "index.html"; 
+        window.location.href = "landing-page.html"; 
     } 
         else {
         alert("password does not match");
         return;
     }
 }
-//js for slide
-let currentScrollPosition = 0;
-             let scrollAmount = 400;
-             const  sCont = document.querySelector(".storys-container");
-             const hScroll = document.querySelector(".horizontal-scroll");
-             const btnScrollLeft = document.querySelector("#btn-scroll-left");
-             const btnScrollRight = document.querySelector("#btn-scroll-right");
-             btnScrollLeft.style.opacity = "0";
-            
-             let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
-              function scrollHorizontally(val){
-                  currentScrollPosition += (val * scrollAmount);
-                  sCont.style.left = currentScrollPosition + "px";
-                  if(currentScrollPosition >= 0){
-                       currentScrollPosition = 0
-                       btnScrollLeft.style.opacity = "0";
-                  }
-                  else{
-                    btnScrollLeft.style.opacity = "1";
-                  }
-                  if(currentScrollPosition <= maxScroll){
-                      currentScrollPosition = maxScroll;
-                      btnScrollRight.style.opacity = "0";
-                  }
-                  else{
-                    btnScrollRight.style.opacity = "1";
-                  }
-                  sCont.style.left=currentScrollPosition + "px"; 
-              }
-  
+//Save object in storage
+function save() {
+
+    let loginData = {
+        fname: document.getElementById("username").value,
+        email: document.getElementById("email-reg").value,
+        pass: document.getElementById("reg-password").value,
+    }
+    localStorage.setItem("loginData", JSON.stringify(loginData));
+    console.log(localStorage.getItem("loginData"));
+}

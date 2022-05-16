@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="decription" content="kindle-library-login HTML,CSS,JavaScript">
-    <meta name="author" content="K Modibedi">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="decription" content="kindle-library-login HTML,CSS,JavaScript">
+        <meta name="author" content="K Modibedi">
 
-    <title>Kindle Register</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
-</head>
-<body class="forms">
-    <main class= "form-register">
-       <!-- <span><img src="/images/Amazon_logo.png" alt="amazon logo not available" id="img"></span> -->
-        <form action="" class="form-reg" id="form-reg">
-            <h1 class="logo-login">Register</h1>
-            <input type="text" name="firstname" placeholder="First Name" class="username placeholder" id="username" required>
-            <input type="text" name="lastname" placeholder="Last Name" class="username placeholder" id="lastname" required>
-            <input type="alphanumeric" name="email" placeholder="Email Address" class="username placeholder" id="email-reg" required> 
-            <input type="name" name="phone" placeholder="Phone Number" class="p-numbr placeholder"  id="phone" required>
-            <input type="password" name="password" placeholder="Password" class="password placeholder" id="reg-password" required>
-            <input type="password" name="password-confirm" placeholder="Password Confirmation" class="password placeholder" id="password-confirm" required>
-            <button type="button" name="register" class="register" onclick="validateForm()">Register</button>
-            <p class="login-reglink">Already registered? <a href="login.html">Login here.</a></p>
-        </form>
-    </main>
-</body>
+        <title>Kindle Register</title>
+        <link type="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <main class= "form-reg">
+            <span><img src="/images/Amazon_logo.png" alt="logo"></span>
+            <span><h1 class="heading-login">Register</h1></span>
+            <form action="" class="form-reg" id="form-reg">
+                <input type="text" name="firstname" placeholder="First Name" class="username placeholder" id="username" required>
+                <input type="text" name="lastname" placeholder="Last Name" class="username placeholder" id="lastname" required>
+                <input type="alphanumeric" name="email" placeholder="Email Address" class="username placeholder" id="email-reg" required> 
+                <input type="name" name="phone" placeholder="Phone Number" class="p-numbr placeholder"  id="phone" required>
+                <input type="password" name="password" placeholder="Password" class="password placeholder" id="reg-password" required>
+                <input type="password" name="password-confirm" placeholder="Password Confirmation" class="password placeholder" id="password-confirm" required>
+                <button type="button" name="register" class="register" onclick="validateForm()">Register</button>
+                <p class="login-reglink">Already registered? <a href="/index.html">Login here.</a></p>
+            </form>
+        </main> 
+        <script type="text/javascript" src="/index.js"></script>
+    </body>
 </html>
-
-<script type="text/javascript" src="script.js"></script>

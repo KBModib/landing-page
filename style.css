@@ -1,12 +1,3 @@
-@media screen and (min-width: 768px) {}
-body {
-    background-color: #FBF9F5;
-}
-flex-center{
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -20,13 +11,14 @@ flex-center{
     "card-2 card-6 card-6 card-6 card-6 card-7"
     "card-3 card-6 card-6 card-6 card-6 card-7";
     gap: none;
-
+    
     background-color: #FBF9F5;
     width: 1650px;
-    height: 750px;
+    height: 760px;
     max-width: 100%;
     max-height: 100%;
-    position: relative;
+    overflow: hidden;
+    scroll-behavior: none;
 }
 .card {
     margin: center;
@@ -34,37 +26,35 @@ flex-center{
 .profile-container{
     grid-area: "card-1";
     background-color: #FBF9F5;
-    Background-image: linear-gradient(to right, #e5ddc7, #d8d2cd);
+    Background-image: linear-gradient(to right, #FBF9F5, #d2c2a6, #dad1ab);
     grid-column: 1/2;
     grid-row: 1/4;
     align-items: center;
     border-top-right-radius: 10%;
     border-bottom-right-radius: 10%;
-    margin-top: 45px;
-    margin-right: 20px; 
-    
+    margin: 25px 30px 10px 10px;
 }
 .profile-container-image {
     border: 0.3px;
     border-radius: 20%;
     margin-left: 60px;
-    margin-top: 25px;
-    width: 100px; 
-    height: 100px;
+    margin-top: 30px;
+    width: 95px; 
+    height: 95px;
 }
 #profile-text {
     margin-left: 60px;
-    margin-bottom: 20px;
-    line-height: 10pt;
-    font-size: 20px;
+    line-height: 12pt;
+   
 }
 .profile-container h1 {
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 900;
-    font-size: 155pt;
+    font-family: 'Roboto', serif;
+    font-weight: bolder;
+    font-size: 25px;
+
 }
 .profile-container p {
-    font-size: 50pt;
+    font-size: 23px;
     line-height: 20pt;
 }
 .nav-container {
@@ -72,46 +62,37 @@ flex-center{
     grid-column: 1/2;
     grid-row: 4/7;
     background-color: #FBF9F5;
-    align-items: right;
-    margin-top: 30px;
-    font-family: 'Open Sans', sans-serif;
+    margin-top: 35px;
+    margin-left: 30px;
+    font-family: 'Roboto', serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 17.5px;
 }
-ul{
-    list-style-type: none;
-    line-height: 35pt;
-    display: block;
-
-}
-li {
-    line-height: 35pt;
-    display: block;
-}
-.nav-icon {
-    display: inline-block;
+.nav-img {
+    width: 20px;
 }
 .logo {
     grid-area: "card-3";
     grid-column: 1/2;
     grid-row: 7/8;
     background-color: #FBF9F5;
-    margin-bottom: 60px;
-    margin-left: 5px;
-    width: 100px;
+    margin-left: 14px;
+    margin-top: 65px;
+    width: 110px;
 }
 .top-right{
     grid-area: "card-4";
     grid-column: 2/7;
     grid-row: 1/2;
+    background-color: #FBF9F5;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #FBF9F5;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    }
- .link-right {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+.link-right {
     padding-right: 30px;
     padding-bottom: 35px;
 }
@@ -123,19 +104,20 @@ a {
     border: none;
     border-radius:10px;
     padding-right:25px;
-    -webkit-text-fill-color: rgb(138, 132, 132)
+    -webkit-text-fill-color: rgb(138, 132, 132);
 }
 .search-box {
-    width: 85px;
-  justify-content: space-around;
+    width: 95px;
+    height: 15px;
+    justify-content: space-around;
     border: 0.8px solid #f0eeea;
     background-color: #ffffff;
     border-radius: 30px;
-    margin-right: 15px;
+    margin-right: 45px;
     
 }
 .sup {
-    font-size: 30px;
+    font-size: 50px;
     -webkit-text-fill-color: #fa5203;
     font-weight: bold;
     
@@ -145,489 +127,498 @@ border-radius: 10px;
 padding-right: 12px;
 }
 .booklist {
-    
     grid-area: "card-5";
     grid-column: 2/7;
     grid-row: 2/5;
-    display: flex;
-    overflow-y: hidden;
-    position: relative;
     background-color: #FBF9F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
 }
-.rowImagecontainer {
-    height: 8rem;
+.horizontal-scroll{
+    width: 100rem;
+    height: 300px;
+    background-color: #FBF9F5;
+    border: 1px solid #FBF9F5;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.horizontal-scroll .btn-scroll{
+    background-color: rgb(62, 213, 28);
+    color: rgb(11, 152, 126);
+    box-shadow:0 0 20px #999 ;
+    padding: 15px 18px;
+    border: 0;
+    border-radius: 50%;
+    margin: 10px 15px;
+    z-index: 1;
+    cursor: pointer ;
+    transition: 1s;
+}
+.book-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition:0.5s all ease-out;
+}
+/*book1*/
+.book-card{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;   
+}
+.book-background{
+    position: absolute;
     background-image: linear-gradient(to right, rgb(249, 207, 207), #435922);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
+    left: 3rem;
+}
+.book-details{
+    position: relative;
+    width: 20rem;
+    left: -10rem;
+    right: 5rem;
+}
+.book-cover{
     position: absolute;
-    left: 1rem;
-    bottom: 2rem;
+    left: -4rem;
+    top: -4rem;
 }
-.columnSlidefade {
+/*book2*/
+.book-background1{
     position: absolute;
-    width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
-}
-.columnSlidefade p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover {
-    position: absolute;
-    left: -17rem;
-    top: -6rem;
-}
-/*----------------------- Scrolling gallery =---------------------------------*/
-.rowImagecontainer1 {
-    height: 8rem;
     background-image: linear-gradient(to right, #f8d135, #e16201);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 35rem;
-    bottom: 2rem;
+    left: 25rem;
 }
-.columnSlidefade1 {
+.book-card1{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card1 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;
+}
+.book-details1{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade1 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-.columnSlidefade1 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-#bookCover1 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover1 {
+.book-cover1{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/*--------------------------------------------------------*/
-.rowImagecontainer2 {
-    height: 8rem;
+/*book3*/
+.book-background2{
+    position: absolute;
     background-image: linear-gradient(to right, #2e9bd6, #050e1e);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 70rem;
-    bottom: 2rem;
+    left: 47rem;
 }
-.columnSlidefade2 {
+.book-card2{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card2 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;
+}
+.book-details2{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade2 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade2 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover2 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover2 {
+.book-cover2{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/*--------------------------------------------------------*/
-.rowImagecontainer3 {
-    height: 8rem;
+/*book4*/
+.book-background3{
+    position: absolute;
     background-image: linear-gradient(to right, rgb(6, 157, 18), #cd3d09);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 105rem;
-    bottom: 2rem;
+    left: 69rem;
 }
-.columnSlidefade3 {
+.book-card3{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card3 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details3{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade3 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade3 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover3 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover3 {
+.book-cover3{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/*--------------------------------------------------------*/
-.rowImagecontainer4 {
-    height: 8rem;
+/*book5*/
+.book-background4{
+    position: absolute;
     background-image: linear-gradient(to right, #ab614d, #d42c07);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 140rem;
-    bottom: 2rem;
+    left: 91rem;
 }
-.columnSlidefade4 {
+.book-card4{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card4 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;
+}
+.book-details4{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade4 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade4 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover4 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover4 {
+.book-cover5{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/*--------------------------------------------------------*/
-.rowImagecontainer5 {
-    height: 8rem;
+/*book6*/
+.book-background5{
+    position: absolute;
     background-image: linear-gradient(to right, #11d4ce, #e1cd30);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 175rem;
-    bottom: 2rem;
+    left: 113rem;
 }
-.columnSlidefade5 {
+.book-card5{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card5 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;  
+}
+.book-details5{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade5 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade5 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover5 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover5 {
+.book-cover5{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/**************************************************************************/
-.rowImagecontainer6 {
-    height: 8rem;
+/*book7*/
+.book-background6{
+    position: absolute;
     background-image: linear-gradient(to bottom right, #abbeb1, #181604);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 175rem;
-    bottom: 2rem;
+    left: 135rem;
 }
-.columnSlidefade6 {
+.book-card6{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card6 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details6{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade6 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade6 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover6 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover6 {
+.book-cover6{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/**************************************************************************/
-.rowImagecontainer7 {
-    height: 8rem;
+/*book8*/
+.book-background7{
+    position: absolute;
     background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 175rem;
-    bottom: 2rem;
+    left: 157rem;
 }
-.columnSlidefade7 {
+.book-card7{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card7 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade7 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade7 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover7 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover7 {
+.book-cover7{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/**************************************************************************/
-.rowImagecontainer8 {
-    height: 8rem;
+/*book9*/
+.book-background8{
+    position: absolute;
     background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 175rem;
-    bottom: 2rem;
+    left: 179rem;
 }
-.columnSlidefade8 {
+.book-card8{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card8 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details8{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade8 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade8 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover8 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover8 {
+.book-cover8{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/**************************************************************************/
-.rowImagecontainer9 {
-    height: 8rem;
+/*book10*/
+.book-background9{
+    position: absolute;
     background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
-    width: 30rem;
+    height: 10rem;
+    width: 20.5rem;
     border-radius: 25px;
-    position: absolute;
-    left: 175rem;
-    bottom: 2rem;
+    left: 201rem;
 }
-.columnSlidefade9 {
+.book-card9{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card9 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details9{
     position: absolute;
     width: 10rem;
-    height: 20px;
-    top: 3rem;
-    left: 18rem;
-    border-radius: 20px;
-    color: rgb(232, 231, 231);
+    left: 5rem;
 }
-.columnSlidefade9 p {
-    font-size: small;
-    margin-left: -120px;
-    margin-top: 20px;
-}
-.columnSlidefade9 h3 {
-    font-size: medium;
-    margin-top: -40px;
-    margin-left: -120px;
-    margin-top: -20px;
-}
-#bookCover9 img {
-    width: 104px;
-    height: 151px;
-    border-radius: 20px;
-}
-#bookCover9 {
+.book-cover9{
     position: absolute;
-    left: -17rem;
-    top: -6rem;
+    left: -4rem;
+    top: -4.5rem;
 }
-/**************************************************************************/
+
 .new-books {
     grid-area: "card-6";
     grid-column: 2/6;
     grid-row: 5/8;
     background-color: #FBF9F5;
-    align-items: center;
+    justify-items: center;
+    align-items: flex-start;
     margin:center;
+    margin-bottom: 0px;
     
 }
 .new-cover {
-        border-radius: 12px;
-    }
+        border-radius: 10px;
+}
     .book-title {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
+        font-family: 'Roboto', serif;
+        font-size: 12pt;
         font-weight: bold;
-        margin: 50px;
+        margin: 75px;
        
-    }
-    .author-new {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 13.8px;
+}
+.author-new {
+        font-family: 'Roboto', serif;
+        font-size: 11pt;
         font-weight: lighter;
         padding-bottom: 10px;
-    }
+}
     .genre-button {
         border: 1px solid;
         border-color: #b8b7b7 ;
         border-radius: 30px;
         background-color: #b8b7b7;
-        font-family: "Helvetica Neue",;
-        font-size: 12px;
+        font-family: 'Roboto', serif;
+        font-size: 10pt;
         font-weight: 600;
         -webkit-text-fill-color: #363636;
-    }
-    .heading {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 15px;
+}
+.heading {
+        font-family: 'Roboto', serif;
+        font-size: 10pt;
         font-weight: bold;
-    }
+}
 .author-list {
     grid-area: "card-7";
     grid-column: 6/8;
     grid-row: 5/8;
-    background-color: #e6e5e1;
+    background-color: #eceff7;
     border: 1px solid;
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
-    border-color: #e6e5e1;
-    margin-top: 35px;
-    margin-bottom: 75px;
-    font-family: 'Open Sans', sans-serif;
+    border-color: #eceff7;
+    margin-top: 15px;
+    padding-top: 25px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', serif;
     font-weight: 300;
-    font-size: 10pt;
-    }
-    .author-list-table {
+    font-size: 11pt;
+}
+.author-list-table {
     margin-top: 5px;
     padding-left: 25px;
-    }
-    .author-list-table img {
-    border: 0.50px solid #e6e5e1;
-    border-radius: 150px;
-    }
-
-     /**styling for login and registration form**/
-
-.forms {
-    background-color: #bbbbbb;
-    height: 100px;
-    width: 100px;
-    max-width: 100px;
-    max-height: 100px;
-    
 }
+.author-list-table img {
+    border: 1px solid #c0bfbe;
+    border-radius: 80%;
+    width: 60px;
+}
+
+ /**styling for login form**/
+
+ .forms {
+    background-color: #b90707;
+}
+.form-login {
+    display: grid;
+    grid-template-rows: 100px repeat(7, 50px);
+    grid-template-areas: 
+    "item-1"
+    "item-2"
+    "item-3"
+    "item-4"
+    "item-5"
+    "item-6"
+    "item-7";
+    gap: 20px;
+
+    background-color: #d1a512ea;
+}
+/**styling for the registration form **/
+
+.form-reg {
+    display: grid;
+    grid-template-rows: 100px repeat(8, 50px);
+    grid-template-areas: 
+    "item-1"
+    "item-2"
+    "item-3"
+    "item-4"
+    "item-5"
+    "item-6"
+    "item-7"
+    "item-8";
+    gap: 20px;
+
+    background-color: #110ae5ea;
+}
+/*reg form*/
 .form-login {
     display: grid;
     grid-template-rows: 100px repeat(7, 50px);
@@ -651,6 +642,7 @@ padding-right: 12px;
     position: fixed;
     width: 400px;
     max-width: 400px;
+    margin-bottom: 100px;
     
 }
 .form-login h1{
