@@ -12,6 +12,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     </head>
     <body class="grid-container">
             <div class="profile-container">
@@ -55,8 +59,8 @@
                     </tr>    
             </table>
             <div class="booklist">
+                <heading class="heading"><h3> Books you read last</h3></heading>
                 <div class="horizontal-scroll">
-                    <heading class="heading"><h3> Books you read last</h3></heading>
                     <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
                     <button class="btn-scroll" id="btn-scroll-right"  onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
                     <div class="book-container">
@@ -213,6 +217,37 @@
                         <td><b>Candice Carty-Williams</b><br>5 Books</td></tr>
                 </table>
             </aside>
-        <script type="text/javascript" src="/landing-page.js"></script>
-    </body>
-    </html>
+<script type="text/javascript" src="">
+        let currentScrollPosition = 0;
+        let scrollAmount = 400;
+        const  sCont = document.querySelector(".booklist");
+        const hScroll = document.querySelector(".horizontal-scroll");
+        const btnScrollLeft = document.querySelector("#btn-scroll-left");
+        const btnScrollRight = document.querySelector("#btn-scroll-right");
+        btnScrollLeft.style.opacity = "0";
+
+        let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
+
+        function scrollHorizontally(val){
+            currentScrollPosition += (val * scrollAmount);
+            sCont.style.left = currentScrollPosition + "px";
+        if(currentScrollPosition >= 0){
+            currentScrollPosition = 0
+            btnScrollLeft.style.opacity = "0";
+        }
+        else{
+            btnScrollLeft.style.opacity = "1";
+        }
+        if(currentScrollPosition <= maxScroll){
+            currentScrollPosition = maxScroll;
+            btnScrollRight.style.opacity = "0";
+        }
+        else{
+            btnScrollRight.style.opacity = "1";
+        }
+            sCont.style.left=currentScrollPosition + "px"; 
+        }
+  
+    </script>
+</body>
+</html>

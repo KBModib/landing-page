@@ -126,6 +126,14 @@ a {
 border-radius: 10px;
 padding-right: 12px;
 }
+
+
+
+
+
+
+/*****************************************************************styling for scroller****************************************************/
+
 .booklist {
     grid-area: "card-5";
     grid-column: 2/7;
@@ -521,6 +529,7 @@ padding-right: 12px;
     align-items: flex-start;
     margin:center;
     margin-bottom: 0px;
+    top: 15em;
     
 }
 .new-cover {
@@ -580,29 +589,91 @@ padding-right: 12px;
     width: 60px;
 }
 
- /**styling for login form**/
-
- .forms {
-    background-color: #b90707;
+/**Login form**/
+.login-back {
+    background-color: black;
+    overflow: hidden;
+    display: block;
+}
+.login-register-background {
+    background-color: #fcfcfc;
+    width: 550px;
+    height: 750px;
+    border-radius: 30px;
+    opacity: 0.8;
+    margin: 100px 550px;
+    -webkit-text-fill-color: rgb(245, 160, 3);
+    position: relative;
+    padding-top: 60px;
+    max-width: 550px;
+    margin-bottom: 100px;
 }
 .form-login {
     display: grid;
-    grid-template-rows: 100px repeat(7, 50px);
+    grid-template-rows: 100px repeat(5, 50px);
     grid-template-areas: 
     "item-1"
     "item-2"
     "item-3"
     "item-4"
-    "item-5"
-    "item-6"
-    "item-7";
-    gap: 20px;
+    "item-5";
+    gap: 10px;
 
-    background-color: #d1a512ea;
+    background-color: transparent;
+    width: 450px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding-top: 10px;
+    justify-content: center;
 }
-/**styling for the registration form **/
-
-.form-reg {
+#items {
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+}
+.login-button{
+    text-transform: capitalize;
+    border: 1px solid rgb(75, 50, 5);
+    border-radius: 10px;
+    width: 150px;
+    margin-left: 130px;
+}
+.login-button:hover {
+    background: rgb(255, 166, 0);
+    border-color: rgb(255, 166, 0);
+    -webkit-text-fill-color: #ffffff;
+}
+.heading-login {
+    font-size: 4rem;
+    align-items: center;
+}
+.logo-login {
+    margin-left: 150px;
+}
+.form-login a:hover {
+    -webkit-text-fill-color: rgb(255, 94, 0);
+}
+ /** login form end**/
+ /* registration form*/
+ .reg-back {
+    background-color: black;
+    overflow: hidden;
+    display: block;
+ }
+ .form-register {
+    background-color: #fcfcfc;
+    width: 550px;
+    height: 750px;
+    border-radius: 30px;
+    opacity: 0.8;
+    margin: 100px 550px;
+    -webkit-text-fill-color: rgb(245, 160, 3);
+    position: relative;
+    padding-top: 60px;
+    max-width: 550px;
+    margin-bottom: 100px;
+ }
+ .inner-form {
     display: grid;
     grid-template-rows: 100px repeat(8, 50px);
     grid-template-areas: 
@@ -615,58 +686,29 @@ padding-right: 12px;
     "item-7"
     "item-8";
     gap: 20px;
-
-    background-color: #110ae5ea;
-}
-/*reg form*/
-.form-login {
-    display: grid;
-    grid-template-rows: 100px repeat(7, 50px);
-    grid-template-areas: 
-    "item-1"
-    "item-2"
-    "item-3"
-    "item-4"
-    "item-5"
-    "item-6"
-    "item-7";
-    gap: 20px;
-
-    background-color: #ecc648ea;
-    border-radius: 30px;
-    opacity: 0.9;
-    margin: 100px 550px;
-    margin-bottom: 100px;
-    padding: 60px;
-    -webkit-text-fill-color: rgb(75, 50, 5);
-    position: fixed;
+ }
+ .placeholder{
     width: 400px;
-    max-width: 400px;
-    margin-bottom: 100px;
-    
-}
-.form-login h1{
- align-self: center;
-}
-
-#items {
-    width: 400px;
+    height: 50px;
     border-radius: 30px;
 }
-.login-button{
-    margin-left: 150px;
-    margin-right: 550px; 
+.register {
     text-transform: capitalize;
     border: 1px solid rgb(75, 50, 5);
-    position: relative;
     border-radius: 10px;
-    
+    width: 150px;
+    margin-left: 130px;
 }
-.login-button:hover {
- background: rgb(75, 50, 5);
- -webkit-text-fill-color: #ffffff;
+.register:hover {
+    background: rgb(255, 166, 0);
+    border-color: rgb(255, 166, 0);
+    -webkit-text-fill-color: #ffffff;
 }
-/**styling for the registration form **/
+.form-register a:hover {
+    webkit-text-fill-color: rgb(255, 94, 0);
+}
+
+/**styling for the registration form 
 
 .form-reg {
     display: grid;
@@ -718,5 +760,4 @@ padding-right: 12px;
 .register:hover {
     background: rgb(75, 50, 5);
     -webkit-text-fill-color: #ffffff;
-}
- 
+}**/

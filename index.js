@@ -44,8 +44,7 @@ function validateForm() {
     var phone = document.getElementById("phone").value;
     var pass = document.getElementById("reg-password").value;
     var passconfirm = document.getElementById("password-confirm").value;
-   
-   // alert("details logged");
+   alert("details logged");
 
     for(i = 0; i < objUsers.length; i++) {
         if (fname == objUsers[i].username || email == objUsers[i].email) {
