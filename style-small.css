@@ -125,4 +125,159 @@
     }
     
     /*landing page styling */
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+        "card-1 card-1 card-1 card-1 card-1"
+        "card-4 card-4 card-4 card-4 card-4"
+        "card-2 card-2 card-2 card-2 card-2"
+        "card-5 card-5 card-5 card-5 card-5"
+        "card-5 card-5 card-5 card-5 card-5"
+        "card-6 card-6 card-6 card-6 card-6"
+        "card-6 card-6 card-6 card-6 card-6"
+        "card-7 card-7 card-7 card-7 card-7"
+        "card-3 card-3 card-3 card-3 card-3";
+        gap: none;
+        
+        background-color: #FBF9F5;
+        width: 768px;
+        height: 846px;
+        max-width: 768px;
+        max-height: 846px;
+        overflow: hidden;
+        scroll-behavior: none;
+    }
+    .card {
+        margin: center;
+    }
+    .profile-container{
+        grid-area: "card-1";
+        background-color: #FBF9F5;
+        Background-image: linear-gradient(to right, #FBF9F5, #d2c2a6, #dad1ab);
+        grid-column: 1/6;
+        grid-row: 1/2;
+        align-items: center;
+        border-top-right-radius: 10%;
+        border-bottom-right-radius: 10%;
+        margin: 25px 30px 10px 10px;
+    }
+    .profile-container-image {
+        border: 0.3px;
+        border-radius: 20%;
+        margin-left: 60px;
+        margin-top: 30px;
+        width: 95px; 
+        height: 95px;
+    }
+    #profile-text {
+        margin-left: 60px;
+        line-height: 12pt;
+       
+    }
+    .profile-container h1 {
+        font-family: 'Roboto', serif;
+        font-weight: bolder;
+        font-size: 25px;
+    
+    }
+    .profile-container p {
+        font-size: 23px;
+        line-height: 20pt;
+    }
+    .nav-container {
+        grid-area: "card-2";
+        grid-column: 1/6;
+        grid-row: 3/4;
+        background-color: #FBF9F5;
+        margin-top: 35px;
+        margin-left: 30px;
+        font-family: 'Roboto', serif;
+        font-weight: 400;
+        font-size: 17.5px;
+    }
+    .nav-img {
+        width: 20px;
+    }
+    .logo {
+        grid-area: "card-3";
+        grid-column: 1/6;
+        grid-row: 9/10;
+        background-color: #FBF9F5;
+        margin-left: 14px;
+        margin-top: 65px;
+        width: 110px;
+    }
+    .top-right{
+        grid-area: "card-4";
+        grid-column: 2/6;
+        grid-row: 2/3;
+        background-color: #FBF9F5;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+    
+    }
+    .link-right {
+        padding-right: 30px;
+        padding-bottom: 35px;
+    }
+    a {
+        text-decoration: none;
+        -webkit-text-fill-color: #000000;
+    } 
+    .search-box  input{
+        border: none;
+        border-radius:10px;
+        padding-right:25px;
+        -webkit-text-fill-color: rgb(138, 132, 132);
+    }
+    .search-box {
+        width: 95px;
+        height: 15px;
+        justify-content: space-around;
+        border: 0.8px solid #f0eeea;
+        background-color: #ffffff;
+        border-radius: 30px;
+        margin-right: 45px;
+        
+    }
+    .sup {
+        font-size: 50px;
+        -webkit-text-fill-color: #fa5203;
+        font-weight: bold;
+        
+    }
+    .search-button {
+    border-radius: 10px;
+    padding-right: 12px;
+    }
+    .booklist {
+        grid-area: "card-5";
+        grid-column: 1/6;
+        grid-row: 4/6;
+        background-color: #FBF9F5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .author-list {
+        grid-area: "card-7";
+        grid-column: 1/6;
+        grid-row: 6/8;
+        background-color: #eceff7;
+        border: 1px solid;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+        border-color: #eceff7;
+        margin-top: 15px;
+        padding-top: 25px;
+        margin-bottom: 15px;
+        font-family: 'Roboto', serif;
+        font-weight: 300;
+        font-size: 11pt;
+    }
 }
