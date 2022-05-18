@@ -75,6 +75,9 @@ function save() {
         email: document.getElementById("email-reg").value,
         pass: document.getElementById("reg-password").value,
     }
-    localStorage.setItem("loginData", JSON.stringify(loginData));
+    localStorage.setItem("fname", "fname.value");
+    localStorage.setItem("email", "email.value");
+    localStorage.setItem("pass", "pass.value");
     console.log(localStorage.getItem("loginData"));
+    alert("data has been saved");
 }

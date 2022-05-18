@@ -1,0 +1,128 @@
+@media (max-width: 768px) {
+    /* login form styling */
+    .login-back {
+        background-color: black;
+        overflow: hidden;
+        display: block;
+    }
+    .login-register-background {
+        background-color: #fcfcfc;
+        width: 250px;
+        height: 450px;
+        border-radius: 30px;
+        opacity: 0.8;
+        margin: 50px 225px;
+        -webkit-text-fill-color: rgb(245, 160, 3);
+        position: relative;
+        padding-top: 30px;
+        max-width: 250px;
+        margin-bottom: 100px;
+    }
+    .form-login {
+        display: grid;
+        grid-template-rows: 50px repeat(5, 25px);
+        grid-template-areas: 
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5";
+        gap: 5px;
+    
+        background-color: transparent;
+        width: 250px;
+        margin-left: 25px;
+        margin-top: 25px;
+        padding-top: 5px;
+        justify-content: center;
+    }
+    #items {
+        width: 200px;
+        height: 25px;
+        border-radius: 15px;
+    }
+    .login-button{
+        text-transform: capitalize;
+        border: 1px solid rgb(75, 50, 5);
+        border-radius: 5px;
+        width: 75px;
+        margin-left: 65px;
+    }
+    .login-button:hover {
+        background: rgb(255, 166, 0);
+        border-color: rgb(255, 166, 0);
+        -webkit-text-fill-color: #ffffff;
+    }
+    .heading-login {
+        font-size: 1rem;
+        align-items: center;
+    }
+    .logo-login {
+        margin-left: 75px;
+        width: 125px;
+    }
+    .form-login a:hover {
+        -webkit-text-fill-color: rgb(255, 94, 0);
+    }
+    /* registration form styling */
+
+    .reg-background {
+        background-color: black;
+        overflow: hidden;
+        display: block;
+     }
+     .form-register {
+        background-color: #fcfcfc;
+        width: 450px;
+        height: 650px;
+        border-radius: 30px;
+        opacity: 0.8;
+        margin: 200px 150px;
+        -webkit-text-fill-color: rgb(245, 160, 3);
+        position: relative;
+        padding-top: 40px;
+        max-width: 450px;
+        margin-bottom: 10px;
+     }
+     .inner-form {
+        display: grid;
+        grid-template-rows: 50px repeat(6, 50px);
+        grid-template-areas: 
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5"
+        "item-6";
+        gap: 10px;
+    
+        margin-bottom: 15px;
+        margin-top: 30px;
+     }
+     .placeholder{
+        width: 350px;
+        height: 30px;
+        border-radius: 30px;
+        margin-left: 35px;
+    }
+    .register {
+        text-transform: capitalize;
+        border: 1px solid rgb(75, 50, 5);
+        border-radius: 10px;
+        width: 100px;
+        margin-left: 180px;
+    }
+    .register:hover {
+        background: rgb(255, 166, 0);
+        border-color: rgb(255, 166, 0);
+        -webkit-text-fill-color: #ffffff;
+    }
+    .form-register a:hover {
+        -webkit-text-fill-color: rgb(255, 94, 0);
+    }
+    .login-reglink {
+        margin: 30px;
+    }
+    
+    /*landing page styling */
+}
