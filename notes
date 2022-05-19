@@ -1,0 +1,380 @@
+/*book1*/
+.book-card{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+    margin-top: -50px;  
+}
+.book-background{
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(249, 207, 207), #435922);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 3rem;
+}
+.book-details{
+    position: relative;
+    width: 20rem;
+    left: -10rem;
+    right: 5rem;
+    margin-top: 55px;
+}
+.book-cover{
+    position: absolute;
+    left: -4rem;
+    top: -4rem;
+}
+/*book2*/
+.book-background1{
+    position: absolute;
+    background-image: linear-gradient(to right, #f8d135, #e16201);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 25rem;
+}
+.book-card1{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card1 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;
+}
+.book-details1{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover1{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book3*/
+.book-background2{
+    position: absolute;
+    background-image: linear-gradient(to right, #2e9bd6, #050e1e);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 47rem;
+}
+.book-card2{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card2 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;
+}
+.book-details2{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover2{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book4*/
+.book-background3{
+    position: absolute;
+    background-image: linear-gradient(to right, rgb(6, 157, 18), #cd3d09);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 69rem;
+}
+.book-card3{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card3 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details3{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover3{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book5*/
+.book-background4{
+    position: absolute;
+    background-image: linear-gradient(to right, #ab614d, #d42c07);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 91rem;
+}
+.book-card4{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card4 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;
+}
+.book-details4{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover5{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book6*/
+.book-background5{
+    position: absolute;
+    background-image: linear-gradient(to right, #11d4ce, #e1cd30);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 113rem;
+}
+.book-card5{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card5 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%;  
+}
+.book-details5{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover5{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book7*/
+.book-background6{
+    position: absolute;
+    background-image: linear-gradient(to bottom right, #abbeb1, #181604);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 135rem;
+}
+.book-card6{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card6 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details6{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover6{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book8*/
+.book-background7{
+    position: absolute;
+    background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 157rem;
+}
+.book-card7{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card7 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover7{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book9*/
+.book-background8{
+    position: absolute;
+    background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 179rem;
+}
+.book-card8{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card8 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details8{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover8{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+/*book10*/
+.book-background9{
+    position: absolute;
+    background-image: linear-gradient(to bottom right, #206A35, #D7CA68);
+    height: 10rem;
+    width: 20.5rem;
+    border-radius: 25px;
+    left: 201rem;
+}
+.book-card9{
+    width: 20.5rem;
+    height: 10rem;
+    margin: 15px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    margin-right: 20rem;
+}
+.book-card9 img{
+    width: 7rem;
+    height: 13rem;
+    border-radius: 10%; 
+}
+.book-details9{
+    position: absolute;
+    width: 10rem;
+    left: 5rem;
+}
+.book-cover9{
+    position: absolute;
+    left: -4rem;
+    top: -4.5rem;
+}
+.horizontal-scroll{
+    width: 100rem;
+    height: 300px;
+    background-color: #05225c;
+    border: 1px solid #01d112;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 120px;
+}
+.horizontal-scroll .btn-scroll{
+    background-color: rgb(213, 28, 167);
+    color: rgb(18, 224, 187);
+    box-shadow:0 0 20px rgb(121, 16, 16) ;
+    padding: 15px 18px;
+    border: 0;
+    border-radius: 50%;
+    margin: 10px 15px;
+    z-index: 1;
+    cursor: pointer ;
+    transition: 1s;
+}
+.book-container{
+    display: flex;
+    color: #d2d4e4;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    transition:0.5s all ease-out;
+    margin-top: 100px;
+}

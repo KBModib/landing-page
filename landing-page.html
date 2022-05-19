@@ -39,10 +39,11 @@
                     <td><p>Profile</p></td>
                 <tr>
                     <td><img class="nav-img" src="/images/logout_icon_183923.svg"></td>
-                <td><p>Logout</p></td></p></td>
-                </table>
+                    <td><p>Logout</p></td></p></td>
+                </tr>
+            </table>
             <div class="logo">
-                <img src="/images/prod of amazon logo.png" alt="Product of Amazon" class="logo">
+               <img src="/images/prod of amazon logo.png" alt="Product of Amazon" class="logo">
             </div>
                 <table class="top-right">
                     <tr>
@@ -59,123 +60,79 @@
                     </tr>    
             </table>
             <div class="booklist">
-                <heading class="heading"><h3> Books you read last</h3></heading>
                 <div class="horizontal-scroll">
                     <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
                     <button class="btn-scroll" id="btn-scroll-right"  onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
-                    <div class="book-container">
-                        <div class="book-card">
-                            <div class="book-background">
-                                <div class="book-details">
-                                   <font size="-1" >
-                                    <h3>The Paper Palace</h3>
-                                    <p>191 Page - Chapter 4 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover"><img src="/images/byrl-1.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card1">
-                            <div class="book-background1">
-                                <div class="book-details1">
-                                   <font size="-1" >
-                                    <h3>Queenie</h3>
-                                    <p>82 Page - Chapter 3 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover1"><img src="/images/byrl-2.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card2">
-                            <div class="book-background2">
-                                <div class="book-details2">
-                                   <font size="-1" >
-                                    <h3>The Lord Of The Rings</h3>
-                                    <p>362 Page Chapter 9 Last Read</p>
-                                    </font>
-                                    <div class="book-cover2"><img src="/images/byrl-3.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card3">
-                            <div class="book-background3">
-                                <div class="book-details3">
-                                    <font size="-1" >
-                                    <h3>To Kill A Mockingbird</h3>
-                                    <p>Complete - Favourite</p>
-                                    </font>
-                                    <div class="book-cover3"><img src="/images/byrl-4.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card4">
-                            <div class="book-background4">
-                                <div class="book-details4">
-                                   <font size="-1" >
-                                    <h3>The Hacienda</h3>
-                                    <p>New purchase - Yet to read</p>
-                                    </font>
-                                    <div class="book-cover4"><img src="/images/byrl-5.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card5">
-                            <div class="book-background5">
-                                <div class="book-details5">
-                                   <font size="-1" >
-                                    <h3>Trust</h3>
-                                    <p>New purchase - Yet to read</p>
-                                    </font>
-                                    <div class="book-cover5"><img src="/images/byrl-6.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card6">
-                            <div class="book-background6">
-                                <div class="book-details6">
-                                   <font size="-1" >
-                                    <h3>How To Tell A Story</h3>
-                                    <p>61 Page - Chapter 3 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover6"><img src="/images/byrl-7.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card7">
-                            <div class="book-background7">
-                                <div class="book-details7">
-                                   <font size="-1" >
-                                    <h3>Little Sister</h3>
-                                    <p>124 Page - Chapter 5 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover7"><img src="/images/byrl-8.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card8">
-                            <div class="book-background8">
-                                <div class="book-details8">
-                                   <font size="-1" >
-                                    <h3>Okoye: To The People</h3>
-                                    <p>70 Page - Chapter 3 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover8"><img src="/images/byrl-9.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card9">
-                            <div class="book-background9">
-                                <div class="book-details9">
-                                   <font size="-1" >
-                                    <h3>The Invisible Kingdom: Reimagining Chronic Illness</h3>
-                                    <p>18 Page - Chapter 1  - Last Read</p>
-                                    </font>
-                                    <div class="book-cover9"><img src="/images/byrl-10.jpg"></div>
-                                </div>
-                            </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-1.jpg"></div>
+                         <div class="card-details">
+                            <h3>The Paper Palace</h3>
+                            <p>191 Page - Chapter 4 - Last Read</p>
                         </div>
                     </div>
-                </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-2.jpg"></div>
+                        <div class="card-details">
+                            <h3>Queenie</h3>
+                            <p>82 Page - Chapter 3 - Last Read</p>
+                         </div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-3.jpg"></div>
+                        <div class="card-details">
+                            <h3>The Lord Of The Rings</h3>
+                         <p>362 Page Chapter 9 Last Read</p>
+                         </div>
+                    </div>
+                    <div class="card">
+                     <div class="book-cover"><img src="images/byrl-4.jpg"></div>
+                     <div class="card-details">
+                        <h3>To Kill A Mockingbird</h3>
+                        <p>Complete - Favourite</p>
+                     </div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-5.jpg"></div>
+                        <div class="card-details">
+                            <h3>The Hacienda</h3>
+                            <p>New purchase - Yet to read</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-6.jpg"></div>
+                        <div class="card-details">
+                            <h3>Trust</h3>
+                            <p>New purchase - Yet to read</p></div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-7.jpg"></div>
+                        <div class="card-details">
+                            <h3>How To Tell A Story</h3>
+                            <p>61 Page - Chapter 3 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-8.jpg"></div>
+                        <div class="card-details">
+                            <h3>Little Sister</h3>
+                            <p>124 Page - Chapter 5 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-9.jpg"></div>
+                        <div class="card-details">
+                            <h3>Okoye: To The People</h3>
+                            <p>70 Page - Chapter 3 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="book-cover"><img src="images/byrl-10.jpg"></div>
+                        <div class="card-details">
+                            <h3>The Invisible Kingdom: Reimagining Chronic Illness</h3>
+                            <p>18 Page - Chapter 1  - Last Read</p>
+                        </div>
+                    </div>
+                </div>    
             </div>
             <table class="new-books">
                 <table class="new-books">
@@ -251,3 +208,122 @@
     </script>
 </body>
 </html>
+<!---
+<div class="booklist">
+    <div class="horizontal-scroll">
+        <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="btn-scroll" id="btn-scroll-right"  onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
+        <div class="book-container">
+            <div class="book-card">
+                <div class="book-background">
+                    <div class="book-details">
+                       <font size="-1" >
+                        <h3>The Paper Palace</h3>
+                        <p>191 Page - Chapter 4 - Last Read</p>
+                        </font>
+                        <div class="book-cover"><img src="/images/byrl-1.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card1">
+                <div class="book-background1">
+                    <div class="book-details1">
+                       <font size="-1" >
+                        <h3>Queenie</h3>
+                        <p>82 Page - Chapter 3 - Last Read</p>
+                        </font>
+                        <div class="book-cover1"><img src="/images/byrl-2.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card2">
+                <div class="book-background2">
+                    <div class="book-details2">
+                       <font size="-1" >
+                        <h3>The Lord Of The Rings</h3>
+                        <p>362 Page Chapter 9 Last Read</p>
+                        </font>
+                        <div class="book-cover2"><img src="/images/byrl-3.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card3">
+                <div class="book-background3">
+                    <div class="book-details3">
+                        <font size="-1" >
+                        <h3>To Kill A Mockingbird</h3>
+                        <p>Complete - Favourite</p>
+                        </font>
+                        <div class="book-cover3"><img src="/images/byrl-4.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card4">
+                <div class="book-background4">
+                    <div class="book-details4">
+                       <font size="-1" >
+                        <h3>The Hacienda</h3>
+                        <p>New purchase - Yet to read</p>
+                        </font>
+                        <div class="book-cover4"><img src="/images/byrl-5.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card5">
+                <div class="book-background5">
+                    <div class="book-details5">
+                       <font size="-1" >
+                        <h3>Trust</h3>
+                        <p>New purchase - Yet to read</p>
+                        </font>
+                        <div class="book-cover5"><img src="/images/byrl-6.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card6">
+                <div class="book-background6">
+                    <div class="book-details6">
+                       <font size="-1" >
+                        <h3>How To Tell A Story</h3>
+                        <p>61 Page - Chapter 3 - Last Read</p>
+                        </font>
+                        <div class="book-cover6"><img src="/images/byrl-7.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card7">
+                <div class="book-background7">
+                    <div class="book-details7">
+                       <font size="-1" >
+                        <h3>Little Sister</h3>
+                        <p>124 Page - Chapter 5 - Last Read</p>
+                        </font>
+                        <div class="book-cover7"><img src="/images/byrl-8.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card8">
+                <div class="book-background8">
+                    <div class="book-details8">
+                       <font size="-1" >
+                        <h3>Okoye: To The People</h3>
+                        <p>70 Page - Chapter 3 - Last Read</p>
+                        </font>
+                        <div class="book-cover8"><img src="/images/byrl-9.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="book-card9">
+                <div class="book-background9">
+                    <div class="book-details9">
+                       <font size="-1" >
+                        <h3>The Invisible Kingdom: Reimagining Chronic Illness</h3>
+                        <p>18 Page - Chapter 1  - Last Read</p>
+                        </font>
+                        <div class="book-cover9"><img src="/images/byrl-10.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
