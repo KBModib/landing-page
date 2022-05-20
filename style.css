@@ -65,7 +65,7 @@
     grid-row: 4/5;
     background-color: #FBF9F5;
     margin-top: -200px;
-    margin-left: 10px;
+    margin-left: 50px;
     font-family: 'Roboto', serif;
     font-weight: 400;
     font-size: 17.5px;
@@ -143,25 +143,33 @@ padding-right: 12px;
     justify-content: center;
     align-items: center;
     margin-bottom:100px;
-    border: 1px solid #f203fa;
-    background-color: #03fa18;
-    /*overflow: hidden;*/   
+    background-color: #FBF9F5;
+    /*overflow: hidden;*/
+}
+.booklist .heading {
+    margin-top: -300px;
+    width: 350px;
+    font-family: 'Roboto', serif;
+    font-size: 12pt;
+    font-weight: bold;
 }
 .horizontal-scroll{
     width: 100rem;
-    height: 280px;
-    background-color: #05225c;
-    border: 1px solid #01d112;
+    height: 220px;
+    background-color: #FBF9F5;
     border-radius: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     position: relative;
     overflow: hidden;
     margin-top: 30px;
+    scroll-behavior: smooth;
+    margin-left: -300px;
+    
 }
-.horizontal-scroll .btn-scroll{
+.button-next-prev {
     background-color: rgb(213, 28, 167);
     color: rgb(18, 224, 187);
     box-shadow:0 0 20px rgb(121, 16, 16) ;
@@ -171,34 +179,72 @@ padding-right: 12px;
     margin: 10px 15px;
     z-index: 1;
     cursor: pointer ;
-    transition: 1s;
-    justify-items: space-between;
+    /*transition: 1s;
+    justify-items: space-between;*/
     display: flex;
+    width: 20px;
+    height:20px;
+}
+.button-next-prev img {
+    width: 30px;
+    height:30px;
+    padding: 15px 18px;
+    margin: 10px 15px;
+}
+.horizontal-scroll::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    z-index: 99;
+    height: 110%;
+    width: 80px;
+    background-image: linear-gradient(90deg, rgb(182, 182, 182), transparent);
+}
+.horizontal-scroll::after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    z-index: 99;
+    height: 110%;
+    width: 80px;
+    background-image: linear-gradient(-90deg, rgb(182, 182, 182), transparent);
 }
 .card {
-    height: 190px;
+    height: 170px;
     border: 1px solid rgb(221, 9, 9);
     background-color: #c5b804;
     width: 850px;
     gap: 120px;
     border-radius: 10%;
     margin-right: 5px;
-    margin-bottom: -60px;
+    margin-left: 15px;
+    margin-bottom: -30px;
 }
 .book-cover {
-    
+    width:350px;
 }
 .book-cover img {
     width:100px;
     height:180px;
     border-radius: 12%;
     margin-top: -30px;
+    margin-left: 15px;
 }
 .card-details {
     border: 1px solid #031cfa;
-    margin-left: 100px;
-    margin-top: -120px;
-    margin-bottom: 180px
+    margin-left: 130px;
+    margin-top: -110px;
+    margin-bottom: 180px;
+    -webkit-text-fill-color: #d3c6c6;
+    font-style: oblique;
+}
+.card-details h3 {
+    font-size: 13pt;
+}
+.card-details p {
+    font-size: 8pt;
 }
 .new-books {
     grid-area: "card-6";

@@ -12,10 +12,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     </head>
     <body class="grid-container">
             <div class="profile-container">
@@ -60,9 +57,8 @@
                     </tr>    
             </table>
             <div class="booklist">
+                <h3 class="heading">Books you last read</h3>
                 <div class="horizontal-scroll">
-                    <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
-                    <button class="btn-scroll" id="btn-scroll-right"  onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
                     <div class="card">
                         <div class="book-cover"><img src="images/byrl-1.jpg"></div>
                          <div class="card-details">
@@ -132,6 +128,13 @@
                             <p>18 Page - Chapter 1  - Last Read</p>
                         </div>
                     </div>
+                    <div class="swiper-button-next">
+                        <button type="button" class="button-next-prev"><img src="/images/slider arrow right.png"></button>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <button type="button" class="button-next-prev"><img src="/images/slider arrow right.png"></button>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>    
             </div>
             <table class="new-books">
@@ -174,38 +177,25 @@
                         <td><b>Candice Carty-Williams</b><br>5 Books</td></tr>
                 </table>
             </aside>
-<script type="text/javascript" src="">
-        let currentScrollPosition = 0;
-        let scrollAmount = 400;
-        const  sCont = document.querySelector(".booklist");
-        const hScroll = document.querySelector(".horizontal-scroll");
-        const btnScrollLeft = document.querySelector("#btn-scroll-left");
-        const btnScrollRight = document.querySelector("#btn-scroll-right");
-        btnScrollLeft.style.opacity = "0";
+            <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-        let maxScroll = -sCont.offsetWidth + hScroll.offsetWidth;
-
-        function scrollHorizontally(val){
-            currentScrollPosition += (val * scrollAmount);
-            sCont.style.left = currentScrollPosition + "px";
-        if(currentScrollPosition >= 0){
-            currentScrollPosition = 0
-            btnScrollLeft.style.opacity = "0";
-        }
-        else{
-            btnScrollLeft.style.opacity = "1";
-        }
-        if(currentScrollPosition <= maxScroll){
-            currentScrollPosition = maxScroll;
-            btnScrollRight.style.opacity = "0";
-        }
-        else{
-            btnScrollRight.style.opacity = "1";
-        }
-            sCont.style.left=currentScrollPosition + "px"; 
-        }
-  
-    </script>
+            <script>
+                var swiper = new Swiper(".booklist", {
+                  slidesPerView: 3,
+                  spaceBetween: 30,
+                  slidesPerGroup: 3,
+                  loop: true,
+                  loopFillGroupWithBlank: true,
+                  pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                  },
+                  navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                  },
+                });
+              </script>
 </body>
 </html>
 <!---
