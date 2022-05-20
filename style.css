@@ -35,6 +35,7 @@
     border-bottom-right-radius: 10%;
     margin: 15px 55px 280px 0;
     overflow: hidden;
+    position:static;
 }
 .profile-container-image {
     border: 0.3px;
@@ -44,7 +45,7 @@
     width: 80px; 
     height: 80px;
 }
-#profile-text {
+.profile-text {
     margin-left: 60px;
     line-height: 12pt;
    
@@ -70,6 +71,7 @@
     font-weight: 400;
     font-size: 17.5px;
     overflow: hidden;
+    position:static;
 }
 .nav-img {
     width: 25px;
@@ -83,6 +85,7 @@
     margin-top: 50px;
     width: 130px;
     overflow: hidden;
+    position:static;
 }
 .top-right{
     grid-area: "card-4";
@@ -97,6 +100,7 @@
     margin-top: -10px;
     overflow: hidden;
     margin-bottom: 50px;
+    position:static;
 }
 .link-right {
     padding-right: 30px;
@@ -150,7 +154,7 @@ padding-right: 12px;
     margin-top: -300px;
     width: 350px;
     font-family: 'Roboto', serif;
-    font-size: 12pt;
+    font-size: 13pt;
     font-weight: bold;
 }
 .horizontal-scroll{
@@ -170,29 +174,28 @@ padding-right: 12px;
     
 }
 .button-next-prev {
-    background-color: rgb(213, 28, 167);
-    color: rgb(18, 224, 187);
-    box-shadow:0 0 20px rgb(121, 16, 16) ;
-    padding: 15px 18px;
-    border: 0;
-    border-radius: 50%;
-    margin: 10px 15px;
-    z-index: 1;
-    cursor: pointer ;
-    /*transition: 1s;
-    justify-items: space-between;*/
+    justify-items: space-between;
+    align-items: center;
     display: flex;
     width: 20px;
-    height:20px;
+    height: 15px;
+    padding: 15px 18px;
+    margin: 10px 15px;
+    border: 0;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer ;
 }
 .button-next-prev img {
     width: 30px;
-    height:30px;
-    padding: 15px 18px;
-    margin: 10px 15px;
+    height: 20px;
+    padding: 18px;
+    margin-top: -15px;
+    margin-bottom: -15px;
+
 }
 .horizontal-scroll::before {
-    position: absolute;
+    position: static;
     content: "";
     left: 0;
     top: 0;
@@ -200,21 +203,23 @@ padding-right: 12px;
     height: 110%;
     width: 80px;
     background-image: linear-gradient(90deg, rgb(182, 182, 182), transparent);
+    position: absolute;
+    overflow: hidden;
 }
 .horizontal-scroll::after {
-    position: absolute;
+    position: static;
     content: "";
     right: 0;
     top: 0;
     z-index: 99;
     height: 110%;
     width: 80px;
+    overflow: hidden;
     background-image: linear-gradient(-90deg, rgb(182, 182, 182), transparent);
+    ;
 }
 .card {
     height: 170px;
-    border: 1px solid rgb(221, 9, 9);
-    background-color: #c5b804;
     width: 850px;
     gap: 120px;
     border-radius: 10%;
@@ -233,18 +238,56 @@ padding-right: 12px;
     margin-left: 15px;
 }
 .card-details {
-    border: 1px solid #031cfa;
-    margin-left: 130px;
+    margin-left: 150px;
     margin-top: -110px;
     margin-bottom: 180px;
-    -webkit-text-fill-color: #d3c6c6;
+    -webkit-text-fill-color: #dfe3e9;
     font-style: oblique;
+
 }
 .card-details h3 {
     font-size: 13pt;
 }
 .card-details p {
     font-size: 8pt;
+}
+.card-1 {
+    background-image: linear-gradient(to right, rgb(249, 207, 207), #435922);
+}
+.card-2 {
+    background-image: linear-gradient(to right, #f8d135, #e16201);
+}
+.card-3 {
+    background-image: linear-gradient(to right, #2e9bd6, #050e1e);
+ 
+}
+.card-4 {
+    background-image: linear-gradient(to right, rgb(6, 157, 18), #cd3d09);
+
+}
+.card-5 {
+    background-image: linear-gradient(to right, #ab614d, #d42c07);
+
+}
+.card-6 {
+    background-image: linear-gradient(to right, #11d4ce, #e1cd30);
+
+}
+.card-7 {
+    background-image: linear-gradient(to right, #abbeb1, #181604);
+
+}
+.card-8 {
+    background-image: linear-gradient(to right, #1965a3, #2e7903);
+
+}
+.card-9 {
+    background-image: linear-gradient(to right, #8c1b9b, #d85a11);
+
+}
+.card-10 {
+    background-image: linear-gradient(to right, #17a094, #f1df52);
+
 }
 .new-books {
     grid-area: "card-6";
@@ -256,7 +299,6 @@ padding-right: 12px;
     margin-bottom: 250px;
     margin-bottom: 0px;
     margin-top: 100px;
-    
 }
 .new-cover {
         border-radius: 10px;
@@ -401,7 +443,7 @@ padding-right: 12px;
  }
  .inner-form {
     display: grid;
-    grid-template-rows: 50px repeat(8, 50px);
+    grid-template-rows: 45px repeat(9, 45px);
     grid-template-areas: 
     "item-1"
     "item-2"
@@ -410,16 +452,26 @@ padding-right: 12px;
     "item-5"
     "item-6"
     "item-7"
-    "item-8";
+    "item-8"
+    "item-9";
     gap: 15px;
 
-    margin-bottom: 150px;
+    margin-bottom: 160px;
  }
  .placeholder{
     width: 400px;
     height: 50px;
     border-radius: 30px;
     margin-left: 65px;
+}
+.img-upload {
+    width: 400px;
+    height: 50px;
+    margin-left: 75px;
+}
+.img-upload button {
+    border: 2px solid rgb(75, 50, 5);
+    border-radius: 30px;
 }
 .register {
     text-transform: capitalize;
