@@ -59,9 +59,11 @@
             <div class="booklist">
                 <h3 class="heading">Books you last read</h3>
                 <div class="button-next-prev">
-                    <button class="button-next" onclick="ScrollBooks('right')"><img src="images/slider arrow left.png"></button>
-                    <button class="button-prev" onclick="ScrollBooks('left')"><img src="images/slider arrow right.png"></button>
-                </div>  
+                    <div class="button-next"><button onclick="ScrollBooks('right')"><img src="images/slider arrow left.png"></button></div>
+                </div>
+                <div class="button-next-prev">
+                    <div class="button-prev"><button onclick="ScrollBooks('left')"><img src="images/slider arrow right.png"></button></div>
+                </div>   
                 <div class="horizontal-scroll" id="horizontal-scroll">
                     <div class="card card-1">
                         <div class="book-cover"><img src="images/byrl-1.jpg"></div>
@@ -132,8 +134,7 @@
                             <p>18 Page - Chapter 1  - Last Read</p>
                         </div>
                     </div>
-                </div>
-                  
+                </div>  
             </div>
             <table class="new-books">
                 <table class="new-books">
@@ -175,3 +176,6 @@
                         <td><b>Candice Carty-Williams</b><br>5 Books</td></tr>
                 </table>
             </aside>
+        <script type="text/javascript" src="/landing-page.js"></script>    
+    </body>
+</html>    

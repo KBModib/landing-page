@@ -1,4 +1,9 @@
 
+body {
+    margin: 0;
+    padding: 0;
+}
+    
 /* landing page styling */
 .grid-container {
     display: grid;
@@ -74,7 +79,7 @@
     position:static;
 }
 .nav-img {
-    width: 25px;
+    width: 25px;    
 }
 .logo {
     grid-area: "card-3";
@@ -173,26 +178,33 @@ padding-right: 12px;
     margin-left: -300px;
     
 }
-.button-next-prev {
-    justify-items: space-between;
-    align-items: center;
+.button-next-prev button{
+   justify-items: space-between;
     display: flex;
     width: 20px;
-    height: 15px;
-    padding: 15px 18px;
-    margin: 10px 15px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 0;
-    border-radius: 50%;
+    border-radius: 60%;
     z-index: 1;
-    cursor: pointer ;
+    cursor: pointer;
+    background-color: transparent;
 }
 .button-next-prev img {
     width: 30px;
     height: 20px;
-    padding: 18px;
-    margin-top: -15px;
-    margin-bottom: -15px;
-
+  
+}
+.button-next {
+    margin-left: -295px;
+    z-index: 1;
+    position: fixed;
+}
+.button-prev {
+    margin-left: 1030px;
+    z-index: 1;
+    position: fixed;
 }
 .horizontal-scroll::before {
     position: static;
@@ -202,7 +214,7 @@ padding-right: 12px;
     z-index: 99;
     height: 110%;
     width: 80px;
-    background-image: linear-gradient(90deg, rgb(182, 182, 182), transparent);
+    background-color: linear-gradient(90deg, rgb(182, 182, 182), transparent);
     position: absolute;
     overflow: hidden;
 }
@@ -243,6 +255,7 @@ padding-right: 12px;
     margin-bottom: 180px;
     -webkit-text-fill-color: #dfe3e9;
     font-style: oblique;
+    text-shadow: black;
 
 }
 .card-details h3 {
@@ -374,7 +387,8 @@ padding-right: 12px;
     position: relative;
     padding-top: 60px;
     max-width: 550px;
-    margin-bottom: 100px;
+    max-height: 100%;
+    margin-bottom: 150px;
 }
 .form-login {
     display: grid;
