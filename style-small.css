@@ -69,6 +69,7 @@
     }
     ul {
         list-style: none;
+        font-size: 8pt;
     }
     .top-right {
         grid-area: "card-4";
@@ -118,7 +119,8 @@
         border-radius: 10px;
         padding-right: 8px;
     }
-    /*.booklist {
+}
+    .booklist {
         grid-area: "card-5";
         background-color: #FBF9F5;
         grid-column:2/4;
@@ -126,7 +128,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /*background-color: #FBF9F5;
         overflow: hidden;
         margin-top: 20px;
     }
@@ -348,4 +349,4 @@
         position: fixed;
         
     }
-    }
+    
