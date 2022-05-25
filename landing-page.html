@@ -9,7 +9,7 @@
         
         <title>Kindle Library-User</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="/style-small.css">
+        <!--<link rel="stylesheet" type="text/css" href="/style-small.css">-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
@@ -54,6 +54,7 @@
                             <a href="#new-release">New Release<sup class="sup">.</sup></a>
                             <a href="featured">Featured</a>
                             <img src="/images/apps.svg" width="10px" alt="icon">
+                            <a href="/cart.html"><img src="/images/shopping-cart.png" class="cart-icon"  width="20px"></a>
                         </td> 
                     </tr>    
             </table>
@@ -137,33 +138,93 @@
                     </div>
                 </div>  
             </div>
-            <table class="new-books">
-                <table class="new-books">
-                    <tr><td colspan="5" class="heading"><h3>New Release</h3></td>
-                   </tr>
-                    <tr align="center">
-                        <td><img class="new-cover" src="/images/book-1 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-2 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-3 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-4 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-5 cover.jpg" width="91px" alt="icon"></td>
-                     </tr>
-                    <tr align="justify center">
-                        <td class="book-title"><h5>Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h6><p class="author-new">Steven Rinella</p></td>
-                        <td class="book-title"><h5>Finding Me: A Memoir</h6><p class="author-new">Viola Davis</p></td>
-                        <td class="book-title"><h5>This Will Not Pass: Trump, Biden, and the Battle for America's Future</h6><p class="author-new">Jonathan Martin</p></td>
-                        <td class="book-title"><h5>22 Seconds (Women's Murder Club, 22)</h6><p class="author-new">James Patterson</p></td>
-                        <td class="book-title"><h5>Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h6><p class="author-new">Dav Pilkey</p></td>
-                    </tr>
-                    <tr align="justify">
-                        <td><button type="button" class="genre-button">Parenting</button></td>
-                        <td><button type="button" class="genre-button">Biographies</button></td>
-                        <td><button type="button" class="genre-button">Politics</button></td>
-                        <td><button type="button" class="genre-button">Thriller</button></td>
-                        <td><button type="button" class="genre-button">Children's</button></td>
-                    </tr>    
-            </table>
-            </table>
+         <div class="new-books">
+            <div class="rt-container">
+                <div class="col-rt-12">
+                    <div class="Scriptcontent">
+                      <div class="container">
+              <div class="card-new">
+                  <div class="face face1">
+                      <div class="content">
+                          <img class="new-cover" src="/images/book-1 cover.jpg">
+                          <h5 class="book-title">Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h5>
+                          <p class="author-new">Steven Rinella</p>
+                          <button type="button" class="genre-button">Parenting</button>
+                      </div>
+                  </div>
+                  <div class="face face2">
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                          <button type="button" class="cart-btn"><a href="/cart.html">Add to cart</a></button>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-new">
+                  <div class="face face1">
+                      <div class="content">
+                          <img class="new-cover" src="/images/book-2 cover.jpg">
+                          <h5 class="book-title">Finding Me: A Memoir</h5>
+                          <p class="author-new">Viola Davis</p>
+                          <button type="button" class="genre-button">Biographies</button>
+                      </div>
+                  </div>
+                  <div class="face face2">
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                          <button type="button" class="cart-btn"><a href="/cart.html">Add to cart</a></button>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-new">
+                  <div class="face face1">
+                      <div class="content">
+                          <img class="new-cover" src="/images/book-3 cover.jpg">
+                          <h5 class="book-title">This Will Not Pass: Trump, Biden, and the Battle for America's Future</h5>
+                          <p class="author-new">Jonathan Martin</p>
+                          <button type="button" class="genre-button">Politics</button>
+                      </div>
+                  </div>
+                  <div class="face face2">
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                          <button type="button" class="cart-btn"><a href="/cart.html">Add to cart</a></button>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-new">
+                  <div class="face face1">
+                      <div class="content">
+                          <img class="new-cover" src="/images/book-4 cover.jpg">
+                          <h5 class="book-title">22 Seconds (Women's Murder Club, 22)</h5>
+                          <p class="author-new">James Patterson</p>
+                          <button type="button" class="genre-button">Thriller</button>
+                      </div>
+                  </div>
+                  <div class="face face2">
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                          <button type="button" class="cart-btn"><a href="/cart.html">Add to cart</a></button>
+                      </div>
+                  </div>
+              </div>
+              <div class="card-new">
+                  <div class="face face1">
+                      <div class="content">
+                          <img class="new-cover" src="/images/book-5 cover.jpg">
+                          <h5 class="book-title">Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h5>
+                          <p class="author-new">Dav Pilkey</p>
+                          <button type="button" class="genre-button">Children's</button>
+                      </div>
+                  </div>
+                  <div class="face face2">
+                      <div class="content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum cumque minus iste veritatis provident at.</p>
+                              <button type="button" class="cart-btn"><a href="/cart.html">Add to cart</a></button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
             <aside class="author-list">
                 <table class="author-list-table">
                     <tr><td colspan="2" class="heading"><h3>Famous Authors</h3></td></tr>

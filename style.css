@@ -31,7 +31,6 @@ body {
 }
 .profile-container{
     grid-area: "card-1";
-    /*background-color: #a3100b;*/
     Background-image: linear-gradient(to right, #FBF9F5, #d2c2a6, #dad1ab);
     grid-column: 1/2;
     grid-row: 1/4;
@@ -134,7 +133,7 @@ a {
 }
 .sup {
     font-size: 45px;
-    -webkit-text-fill-color: #fa5203;
+    -webkit-text-fill-color: rgb(245, 160, 3);
     font-weight: bold;
     
 }
@@ -304,7 +303,7 @@ padding-right: 12px;
     grid-area: "card-6";
     grid-column: 2/6;
     grid-row: 3/6;
-    background-color: #FBF9F5;
+    background-color: #926305;
     justify-items: center;
     align-items: flex-start;
     margin-bottom: 250px;
@@ -313,19 +312,27 @@ padding-right: 12px;
 }
 .new-cover {
         border-radius: 10px;
+        width: 100px;
 }
     .book-title {
         font-family: 'Roboto', serif;
-        font-size: 12pt;
+        font-size: 10pt;
         font-weight: bold;
         margin: 75px;
-       
+        border-color: 1px solid #8c1b9b;
+}
+.card-new {
+    display: flex;
+    border: 1px solid red;
+    margin: -10px 10px 40px -45px;
+    width: 220px
 }
 .author-new {
         font-family: 'Roboto', serif;
-        font-size: 11pt;
+        font-size: 8pt;
         font-weight: lighter;
         padding-bottom: 10px;
+        border-color: 1px solid #7f9b1b;
 }
     .genre-button {
         border: 1px solid;
@@ -341,6 +348,165 @@ padding-right: 12px;
         font-family: 'Roboto', serif;
         font-size: 11pt;
         font-weight: bold;
+}
+.ScriptHeader {
+    float: left;
+    width: 100%;
+    padding: 2em 0;
+}
+.rt-heading {
+    margin: 0 auto;
+	text-align:center;
+}
+.Scriptcontent{
+	line-height:28px;	
+}
+.ScriptHeader h1{
+	font-family: "brandon-grotesque", "Brandon Grotesque", "Source Sans Pro", "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+    color: #6a4aed;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0;
+    line-height: normal;
+
+}
+.ScriptHeader h2 {
+    color: #312c8f;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0 0;
+    line-height: normal;
+
+}
+.ScriptHeader h1 span {
+    display: block;
+    padding: 0;
+    font-size: 22px;
+    opacity: 0.7;
+    margin-top: 5px;
+
+}
+.ScriptHeader span {
+    display: block;
+    padding: 0;
+    font-size: 22px;
+    opacity: 0.7;
+    margin-top: 5px;
+}
+.rt-container {
+	margin: 0 auto;
+	padding-left:12px;
+	padding-right:12px;
+}
+.rt-row:before, .rt-row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.rt-row:after {
+  clear: both;
+}
+[class^="col-rt-"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+.container{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+
+.container .card{
+    position: relative;
+    cursor: pointer;
+}
+
+.container .card .face{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+
+.container .card .face.face1{
+    position: relative;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container .card:hover .face.face1{
+    background: #1900ff;
+    transform: translateY(0);
+}
+
+.container .card .face.face1 .content{
+    transition: 0.5s;
+}
+
+.container .card:hover .face.face1 .content{
+    opacity: 1;
+}
+
+.container .card .face.face1 .content img{
+    max-width: 100px;
+}
+
+.container .card .face.face1 .content h3{
+    margin: 10px 0 0;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.container .card .face.face2{
+    position: relative;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+}
+
+.container .card:hover .face.face2{
+    transform: translateY(0);
+}
+
+.container .card .face.face2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.container .card .face.face2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #333;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.container .card .face.face2 .content a:hover{
+    background: rgb(134, 16, 16);
+    color: #fff;
 }
 .author-list {
     grid-area: "card-7";
@@ -367,7 +533,20 @@ padding-right: 12px;
     border-radius: 80%;
     width: 60px;
 }
-
+.cart-icon {
+    border: 1px solid transparent;
+    border-radius: 40%;
+    padding: 10px;
+}
+.cart-icon:hover {
+    border: 1px solid #000000;
+    border-radius: 40%;
+    background-color: #000000;
+    padding: 10px;
+}
+.new-cover:hover {
+    
+}
 /** Login form styling **/
 .login-back {
     background-color: black;
