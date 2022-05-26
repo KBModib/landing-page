@@ -143,3 +143,20 @@ html work
                         </div>
                     </div>
                </div>
+
+               .card-body .bg .c1 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52, #eb3737);
+    
+}
+.card-body .bg .c2 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
+.card-body .bg .c3 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
+.card-body .bg .c4 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
+.card-body .bg .c5 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
