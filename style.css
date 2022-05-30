@@ -621,12 +621,12 @@ padding-right: 12px;
     margin: 30px;
 }
 
-/*cart styling
+/**cart styling**/
 .cart-body {
 margin: 0;
 padding: 0;
-background-color: #FBF9F5;
-max-height: 100vh;
+background-color: #10be10;
+max-height: 100%;
 
 
 display: grid;
@@ -638,7 +638,9 @@ display: grid;
     gap: none;
 }
 .top-cart {
- height: 80px;
+grid-area: "card-1";
+height: 80px;
+border: 5px solid #11d4ce;
 }
 .top-cart-right {
     padding-left: 1000px;
@@ -674,23 +676,33 @@ display: grid;
 .section-header {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: 22px;
-    margin-top: -140px;
+    font-size: 20px;
+    margin-top: -20px;
     margin-left: 50px;
+    border: 5px solid #8c1b9b;
+}
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: -30px;
+    margin-left: 50px; 
 }
 .shop-items {
-    display: grid;
+    grid-area: "card-2";
+    display: flex;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: 
     "item-1 item-2 item-3 item-4 item-5";
     gap: 0;
 
-    border: 1px solid rgb(226, 53, 0);
-    height: 350px;
+    border: 5px solid rgb(226, 53, 0);
+    height: 250px;
+    margin-top: 80px;
     
 }
 .shop-item {
-    display: grid;
+    display: flex;
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
     "item-1"
@@ -699,13 +711,12 @@ display: grid;
     "item-4"
     "item-5"
     "item-6";
-    gap: 20px;
+    
 
     flex-direction: row;
     justify-content: left;
     align-items: center;
     position: relative;
-    overflow: hidden;
     background-color: #150379;
     border: 1px solid #2e7903;
 }
@@ -715,9 +726,10 @@ display: grid;
     grid-column: 1/2;
     grid-row: 2/3;
     background-color: #11d4ce;
-    margin: 0 25px; 
+    margin-left: 25px; 
     font-family: 'Roboto', sans-serif;
     font-size: 12pt;
+    width: 350px;
 
 }
 .shop-item-image{
@@ -725,35 +737,27 @@ display: grid;
     grid-column: 1/2;
     grid-row: 1/2;
     margin: 15px;
-    margin-left: 100px;
     border-radius: 20px;
     border: 1px solid rgb(245, 160, 3);
 }
 .ratings-cart {
-    grid-area: "item-3";
-    grid-column: 1/2;
-    grid-row: 3/4;
+   
     background-color: #bb4c61;
+    width:150px;
 
 }
 .genre-button-cart {
-    grid-area: "item-4";
-    grid-column: 1/2;
-    grid-row: 4/5;
+   
     background-color: #d85a11;
 
 }
 .shop-item-price {
-    grid-area: "item-5";
-    grid-column: 1/2;
-    grid-row: 5/6;
+    
     background-color: #f1df52;
 
 }
 .shop-item-button{
-    grid-area: "item-6";
-    grid-column: 1/2;
-    grid-row: 6/7;
+   
     background-color: brown;
    
 }

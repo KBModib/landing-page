@@ -12,10 +12,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
-        <!-- JavaScript Bundle with Popper-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <!-- CSS only-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css" />
     </head>
     <body class="cart-body">
@@ -32,9 +28,11 @@
         </table>
         <body>
             <section class="container content-section">
-                <h2 class="section-header">Book Store</h2>
-                <div class="shop-items">
-                    <div class="shop-item">
+                <div>
+                    <h2 class="section-header">Book Store</h2><br><h4>You might also like</h4>
+                </div>    
+               <div class="shop-items">
+                   <div class="shop-item">
                         <span class="shop-item-title">Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature<br>by Steven Rinella</span>
                         <img class="shop-item-image" src="/images/book-1 cover.jpg" width="100px" height="150px">
                         <div class="shop-item-details">
@@ -47,10 +45,9 @@
                                 <br>4,9 (142 reviews)
                             </span>
                             <button type="button" class="genre-button genre-button-cart">Parenting</button>
-                            <span class="shop-item-price">Price:R280.89</span>
+                            <span class="shop-item-price">Price: R280.89</span>
                             <button class="btn btn-primary shop-item-button" type="button">Add To Cart</button>
                         </div>
-                    </div>
                     <div class="shop-item">
                         <span class="shop-item-title">Finding Me: A Memoir<br>by Viola Davis</span>
                         <img class="shop-item-image" src="/images/book-2 cover.jpg" width="100px" height="150px">
@@ -64,7 +61,7 @@
                                 <br>4,8 (2 399 reviews)
                             </span>
                             <button type="button" class="genre-button genre-button-cart">Biographies</button>
-                            <span class="shop-item-price">Price:R293.40</span>
+                            <span class="shop-item-price">Price: R293.40</span>
                             <button class="btn btn-primary shop-item-button"type="button">Add To Cart</button>
                         </div>
                     </div>
@@ -81,7 +78,7 @@
                                 <br>4,3 (671 reviews)
                             </span>
                             <button type="button" class="genre-button genre-button-cart">Politics</button>
-                            <span class="shop-item-price">Price:R326.97</span>
+                            <span class="shop-item-price">Price: R326.97</span>
                             <button class="btn btn-primary shop-item-button" type="button">Add To Cart</button>
                         </div>
                     </div>
@@ -98,7 +95,7 @@
                                 <br>4,5 (5 838 reviews)
                             </span>
                             <button type="button" class="genre-button genre-button-cart">Thriller</button>
-                            <span class="shop-item-price">Price:R237.35</span>
+                            <span class="shop-item-price">Price: R237.35</span>
                             <button class="btn btn-primary shop-item-button" type="button">Add To Cart</button>
                         </div>
                     </div>
@@ -115,14 +112,12 @@
                                 <br>4,8 (1 737 reviews)
                             </span>
                             <button type="button" class="genre-button genre-button-cart">Children's</button>
-                            <span class="shop-item-price">Price:R143.93</span>
+                            <span class="shop-item-price">Price: R143.93</span>
                             <button class="btn btn-primary shop-item-button" type="button">Add To Cart</button>
                         </div>
                     </div>
                 </div>
             </section>
-        
-            </section> 
             <section class="container content-section cart">
                 <h2 class="section-header">Cart</h2>
                 <div class="cart-row">
@@ -136,37 +131,8 @@
                     <strong class="cart-total-title">Total</strong>
                     <span class="cart-total-price">R0</span>
                 </div>
-                <button class="btn btn-primary btn-purchase" type="button">Check out</button>
+                
             </section>
-            <!--<table class="table container content-section cart">
-                <thead> <h2 class="section-header">Cart</h2></thead>
-                  <tr class="cart-row">
-                    <th class="cart-item cart-header cart-column" scope="col">Item</th>
-                    <th class="cart-item cart-header cart-column" scope="col">Price</th>
-                    <th class="cart-item cart-header cart-column" scope="col">Quantity</th>
-                    <th class="cart-item cart-header cart-column" scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>-->
         </body>
         <script type="text/javascript" src="/cart.js"></script>
     </body>

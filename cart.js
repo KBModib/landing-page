@@ -55,7 +55,7 @@ function addToCartClicked(event) {
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
     var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    addItemToCart(title, price, imageSrc)
+    addItemToCart(title||tit2, price, imageSrc)
     updateCartTotal()
 }
 
@@ -94,7 +94,7 @@ function updateCartTotal() {
         var cartRow = cartRows[i];
         var priceElement = cartRow.getElementsByClassName('cart-price')[0];
         var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
-        var price = parseFloat(priceElement.innerText.replace('Price:R', ''));
+        var price = parseFloat(priceElement.innerText.replace('R', ''));
         var quantity = quantityElement.value;
         total = total + (price * quantity);
     }
