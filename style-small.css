@@ -1,0 +1,352 @@
+@media (max-width: 768px) {
+    body {
+        margin: 0 auto;
+        padding: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        background-color: #FBF9F5;
+    }
+    grid-container {
+        display: grid;
+        grid-template-columns: 100px, repeat(2, 200px);
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "card-2 card-4 card-4"
+        "card-2 card-1 card-1"
+        "card-2 card-5 card-5"
+        "card-2 card-6 card-6"
+        "card-2 card-7 card-7"
+        "card-3 card-3 card-3";
+        gap: none;
+    
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        max-height: 100%;
+        
+    }
+    .card {
+        margin: center;
+    }
+    .profile-container{
+        grid-area: "card-1";
+        grid-column: 2/4;
+        grid-row: 2/3;
+        background-image: linear-gradient(to right, #FBF9F5, #d2c2a6, #dad1ab);
+        overflow: hidden;
+        position:static;
+        margin-top: -100px;
+    }
+    .profile-container h1 {
+        font-weight: bolder;
+        font-size: 20px;
+        padding-left: 340px;
+        margin-top: -40px;
+    }
+    .profile-container p {
+        font-size: 18px;
+    }
+    .profile-container-image {
+        display: hidden;
+    }
+    .nav-container{
+        grid-area: "card-2";
+        background-color: #FBF9F5;
+        grid-column: 1/2;
+        grid-row: 1/6;
+        height: 500px;
+        width: 80px;
+        margin-right: 30px; 
+        margin-top: 80px;
+    }
+    .nav-img {
+        width: 30px;
+        height: 25px;
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+    ul {
+        list-style: none;
+        font-size: 8pt;
+    }
+    .top-right {
+        grid-area: "card-4";
+        background-color: #FBF9F5;
+        grid-column: 2/4;
+        grid-row: 1/2;
+        margin-left: -250px;
+        margin-top: -20px;
+        padding: 5px;
+        font-weight: 400;
+        overflow: hidden;
+        position: static;
+        height: 30px;
+        padding-top: 10px;
+    }
+    .link-right {
+        padding-right: 10px;
+    }
+    a {
+        text-decoration: none;
+        -webkit-text-fill-color: #000000;
+        font-size: 9pt;
+    }
+    .search-box input {
+        border: none;
+        border-radius: 10px;
+        padding-right: 20px;
+        -webkit-text-fill-color: rgb(138, 132, 132);
+    }
+    .search-box {
+        width: 35px;
+        height: 15px;
+        justify-content: space-around;
+        border: 0.8px solid #f0eeea;
+        background-color: #ffffff;
+        border-radius: 30px;
+        margin-right: 35px;
+        margin-left: 30px;
+    }
+    .sup {
+        font-size: 18px;
+        -webkit-text-fill-color: #fa5203;
+        font-weight: bold;
+        margin-top: -10px;
+    }
+    .search-button {
+        border-radius: 10px;
+        padding-right: 8px;
+    }
+}
+    .booklist {
+        grid-area: "card-5";
+        background-color: #FBF9F5;
+        grid-column:2/4;
+        grid-row: 3/4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    .booklist .heading {
+        margin-top: -180px;
+        width: 150px;
+        font-family: 'Roboto', serif;
+        font-size: 12pt;
+        font-weight: bold;
+    }
+    .horizontal-scroll{
+        width: 530px;
+        height: 220px;
+        background-color: #FBF9F5;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: 50px;
+        scroll-behavior: smooth;
+        margin-left: -300px;
+        
+    }
+    .button-next-prev button{
+       justify-items: space-between;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 0;
+        border-radius: 60%;
+        z-index: 1;
+        cursor: pointer;
+        background-color: transparent;
+    }
+    .button-next-prev img {
+        width: 30px;
+        height: 20px;
+      
+    }
+    .button-next {
+        margin-left: -295px;
+        z-index: 1;
+        position: fixed;
+    }
+    .button-prev {
+        margin-left: 1030px;
+        z-index: 1;
+        position: fixed;
+    }
+    .horizontal-scroll::before {
+        position: static;
+        content: "";
+        left: 0;
+        top: 0;
+        z-index: 99;
+        height: 110%;
+        width: 80px;
+        background-color: linear-gradient(90deg, rgb(182, 182, 182), transparent);
+        position: absolute;
+        overflow: hidden;
+    }
+    .horizontal-scroll::after {
+        position: static;
+        content: "";
+        right: 0;
+        top: 0;
+        z-index: 99;
+        height: 110%;
+        width: 80px;
+        overflow: hidden;
+        background-image: linear-gradient(-90deg, rgb(182, 182, 182), transparent);
+        ;
+    }
+    .card {
+        height: 150px;
+        width: 350px;
+        gap: 120px;
+        border-radius: 10%;
+        margin-right: 5px;
+        margin-left: 15px;
+        margin-bottom: -30px;
+    }
+    .book-cover {
+        width:350px;
+    }
+    .book-cover img {
+        width:90px;
+        height:150px;
+        border-radius: 12%;
+        margin-top: -30px;
+        margin-left: 15px;
+    }
+    .card-details {
+        margin-left: 150px;
+        margin-top: -90px;
+        margin-bottom: 180px;
+        -webkit-text-fill-color: #dfe3e9;
+        font-style: oblique;
+        text-shadow: black;
+    
+    }
+    .card-details h3 {
+        font-size: 10pt;
+    }
+    .card-details p {
+        font-size: 8pt;
+    }
+    .card-1 {
+        background-image: linear-gradient(to right, rgb(249, 207, 207), #435922);
+    }
+    .card-2 {
+        background-image: linear-gradient(to right, #f8d135, #e16201);
+    }
+    .card-3 {
+        background-image: linear-gradient(to right, #2e9bd6, #050e1e);
+     
+    }
+    .card-4 {
+        background-image: linear-gradient(to right, rgb(6, 157, 18), #cd3d09);
+    
+    }
+    .card-5 {
+        background-image: linear-gradient(to right, #ab614d, #d42c07);
+    
+    }
+    .card-6 {
+        background-image: linear-gradient(to right, #11d4ce, #e1cd30);
+    
+    }
+    .card-7 {
+        background-image: linear-gradient(to right, #abbeb1, #181604);
+    
+    }
+    .card-8 {
+        background-image: linear-gradient(to right, #1965a3, #2e7903);
+    
+    }
+    .card-9 {
+        background-image: linear-gradient(to right, #8c1b9b, #d85a11);
+    
+    }
+    .card-10 {
+        background-image: linear-gradient(to right, #17a094, #f1df52);
+    
+    }
+    
+    .new-books {
+        grid-area: "card-6";
+        background-color: #FBF9F5;
+        grid-column: 2/4;
+        grid-row: 4/5;
+        justify-items: center;
+        align-items: flex-start;
+    }
+    .new-cover {
+            border-radius: 10px;
+    }
+        .book-title {
+            font-size: 10pt;
+            font-weight: bold;
+            margin: 75px;
+    }
+    .author-new {
+            font-size: 8pt;
+            font-weight: lighter;
+            padding-bottom: 10px;
+    }
+        .genre-button {
+            border: 1px solid;
+            border-color: #b8b7b7 ;
+            border-radius: 30px;
+            background-color: #b8b7b7;
+            font-family: 'Roboto', serif;
+            font-size: 8pt;
+            font-weight: 600;
+            -webkit-text-fill-color: #363636;
+    }
+    .author-list {
+        grid-area: "card-7";
+        background-color: #cad1e0;
+        grid-column: 2/4;
+        grid-row: 5/6;
+        font-weight: 300;
+        font-size: 8pt;
+        font-size-adjust: inherit;
+        padding-bottom: 10px;
+    }
+    .author-list-table {
+        margin-top: 5px;
+        padding-left: 65px;
+    }
+    .author-list-table img {
+        border-radius: 50%;
+        width: 50px;
+       
+    }
+    .author-list-table td {
+        width: 150px;
+    }
+    .heading {
+        margin-left: 10px;
+        font-size: 10pt;
+        font-weight: bold;
+    }
+    .logo {
+        grid-area: "card-3";
+        background-color: #FBF9F5;
+        grid-column: 1/4;
+        grid-row: 6/7;
+        margin-left: 10px;
+        margin-top: 235px;
+        width: 60px;
+        overflow: hidden;
+        position: fixed;
+        
+    }
+    

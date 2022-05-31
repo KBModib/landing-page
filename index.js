@@ -44,8 +44,7 @@ function validateForm() {
     var phone = document.getElementById("phone").value;
     var pass = document.getElementById("reg-password").value;
     var passconfirm = document.getElementById("password-confirm").value;
-   
-   // alert("details logged");
+   //alert("details logged");
 
     for(i = 0; i < objUsers.length; i++) {
         if (fname == objUsers[i].username || email == objUsers[i].email) {
@@ -60,7 +59,11 @@ function validateForm() {
                 email: email,
                 password: pass
             },
-        )
+        );
+        localStorage.setItem("fname", fname);
+        localStorage.setItem("email", email);
+        localStorage.setItem("pass", pass);
+
         window.location.href = "landing-page.html"; 
     } 
         else {
@@ -68,14 +71,18 @@ function validateForm() {
         return;
     }
 }
-//Save object in storage
-function save() {
 
-    let loginData = {
-        fname: document.getElementById("username").value,
-        email: document.getElementById("email-reg").value,
-        pass: document.getElementById("reg-password").value,
+const picture = document.getElementById("image");
+picture.addEventListener("change", () => {
+    var reader= new FileReader();
+    reader.onload = () => {
+        localStorage.setItem("image", reader.result);
     }
-    localStorage.setItem("loginData", JSON.stringify(loginData));
-    console.log(localStorage.getItem("loginData"));
+
+    reader.readAsDataURL(picture.files[0]);
+});
+
+function LoadName () {
+    document.getElementById("profile-text").innerHTML = localStorage.getItem("fname");
+    document.getElementById("profile-pic").src = localStorage.getItem("image");
 }

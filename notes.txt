@@ -1,0 +1,162 @@
+.book-container {
+    width: 110rem;
+    height: 350px;
+    background-color: #1f66a0;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    margin-top: 10px;
+}
+.book-cards {
+    border: 1px solid #8c1b9b;
+    width: 250px;
+    height: 450px;
+    display: flex;
+    margin-right: 5px;
+}
+.new-cover {
+        border-radius: 10px;
+        width: 100px;
+        height: 140px;
+        margin-left: 55px;
+        margin-top: 60px;
+        position: fixed;
+}
+.book-title {
+    font-family: 'Roboto', serif;
+    font-size: 10pt;
+    font-weight: bold;
+    margin-top: 210px;
+    margin-left: 25px;
+    position: relative;
+}
+.author-new {
+    font-family: 'Roboto', serif;
+    font-size: 11pt;
+    font-weight: lighter;
+    margin-left: 25px;
+    position: relative;
+}
+.genre-button {
+    border: 1px solid;
+    border-color: #861111 ;
+    border-radius: 30px;
+    background-color: #b8b7b7;
+    font-family: 'Roboto', serif;
+    font-size: 10pt;
+    font-weight: 600;
+    -webkit-text-fill-color: #363636;
+    margin-left: 60px;
+    
+}
+.face-2 {
+    background-color: rgb(228, 5, 228);
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.)
+}
+.book-cards .face-1:hover {
+    visibility: none;
+}
+.book-cards .face-2:hover {
+    visibility: visible;
+}
+
+
+
+html work 
+
+ <div class="book-container">
+                    <div class="book-cards card-0">
+                        <div class="face 1">
+                            <img src="/images/book-1 cover.jpg" class="new-cover"/>
+                            <h5 class="book-title">Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h5>
+                            <p class="author-new">Steven Rinella</p>
+                            <button type="button" class="genre-button">Parenting</button>
+                        </div>
+                        <div class="face 2">
+                            <h5 class="book-title-face2"></h5>
+                            <p class="description"></p>
+                            <i class="rating"></i>
+                            <a type="button" class="buy" href="/cart.html"></a>
+                            <a type="button" class="like"href=""></a>
+                        </div>
+                    </div>
+                    <div class="book-cards card-01">
+                        <div class="face 1">
+                            <img src="/images/book-2 cover.jpg" class="new-cover"/>
+                            <h5 class="book-title">Finding Me: A Memoir</h5>
+                            <p class="author-new">Viola Davis</p>
+                            <button type="button" class="genre-button">Biographies</button>
+                        </div>
+                        <div class="face 2">
+                            <h5 class="book-title-face2"></h5>
+                            <p class="description"></p>
+                            <i class="rating"></i>
+                            <a type="button" class="buy" href="/cart.html"></a>
+                            <a type="button" class="like"href=""></a>
+                        </div>
+                    </div>
+                    <div class="book-cards card-02">
+                        <div class="face 1">
+                            <img src="/images/book-3 cover.jpg" class="new-cover"/>
+                            <h5 class="book-title">This Will Not Pass: Trump, Biden, and the Battle for America's Future</h5>
+                            <p class="author-new">Jonathan Martin</p>
+                            <button type="button" class="genre-button">Politics</button>
+                        </div>
+                    </div>
+                    <div class="book-cards card-03">
+                        <div class="face 1">
+                            <img src="/images/book-4 cover.jpg" class="new-cover"/>
+                            <h5 class="book-title">22 Seconds (Women's Murder Club, 22)</h5>
+                            <p class="author-new">James Patterson</p>
+                            <button type="button" class="genre-button">Thriller</button>
+                        </div>
+                        <div class="face 2">
+                            <h5 class="book-title-face2"></h5>
+                            <p class="description"></p>
+                            <i class="rating"></i>
+                            <a type="button" class="buy" href="/cart.html"></a>
+                            <a type="button" class="like"href=""></a>
+                        </div>
+                    </div>
+                    <div class="book-cards card-04">
+                        <div class="face 1">
+                            <img src="/images/book-5 cover.jpg" class="new-cover"/>
+                            <h5 class="book-title">Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h5>
+                            <p class="author-new">Dav Pilkey</p>
+                            <button type="button" class="genre-button">Children's</button>
+                        </div>
+                        <div class="face 2">
+                            <h5 class="book-title-face2"></h5>
+                            <p class="description"></p>
+                            <i class="rating"></i>
+                            <a type="button" class="buy" href="/cart.html"></a>
+                            <a type="button" class="like"href=""></a>
+                        </div>
+                    </div>
+               </div>
+
+               .card-body .bg .c1 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52, #eb3737);
+    
+}
+.card-body .bg .c2 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
+.card-body .bg .c3 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
+.card-body .bg .c4 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}
+.card-body .bg .c5 {
+    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+}

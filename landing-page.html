@@ -8,16 +8,24 @@
         <meta name="author" content="K Modibedi">
         
         <title>Kindle Library-User</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+       
+        <!--<link rel="stylesheet" type="text/css" href="/style-small.css">-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Work+Sans:ital,wght@1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+        <!-- JavaScript Bundle with Popper
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!-- CSS only
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">--> 
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body class="grid-container">
+    <body class="grid-container" id="body" onload="LoadName();">
             <div class="profile-container">
-                <img src="/images/profile-pic.jpg" alt="profile picture" class="profile-container-image">
-                    <p id="profile-text">Welcome<br>Back</p>
-                    <h1 id="profile-text">Sarah</h1>
+                <img src="/images/profile-pic.jpg" alt="profile picture" class="profile-container-image" id="profile-pic">
+                    <p class="profile-text">Welcome<br>Back</p>
+                    <h1 class="profile-text" id="profile-text">Sarah</h1>
             </div>
             <table class="nav-container">
                 <tr>
@@ -35,10 +43,11 @@
                     <td><p>Profile</p></td>
                 <tr>
                     <td><img class="nav-img" src="/images/logout_icon_183923.svg"></td>
-                <td><p>Logout</p></td></p></td>
-                </table>
+                    <td><p>Logout</p></td></p></td>
+                </tr>
+            </table>
             <div class="logo">
-                <img src="/images/prod of amazon logo.png" alt="Product of Amazon" class="logo">
+               <img src="/images/prod of amazon logo.png" alt="Product of Amazon" class="logo">
             </div>
                 <table class="top-right">
                     <tr>
@@ -51,155 +60,225 @@
                             <a href="#new-release">New Release<sup class="sup">.</sup></a>
                             <a href="featured">Featured</a>
                             <img src="/images/apps.svg" width="10px" alt="icon">
+                            <a href="/cart.html"><img src="/images/shopping-cart.png" class="cart-icon"  width="20px"></a>
                         </td> 
                     </tr>    
             </table>
             <div class="booklist">
-                <div class="horizontal-scroll">
-                    <heading class="heading"><h3> Books you read last</h3></heading>
-                    <button class="btn-scroll" id="btn-scroll-left" onclick="scrollHorizontally(1)"><i class="fas fa-chevron-left"></i></button>
-                    <button class="btn-scroll" id="btn-scroll-right"  onclick="scrollHorizontally(-1)"><i class="fas fa-chevron-right"></i></button>
-                    <div class="book-container">
-                        <div class="book-card">
-                            <div class="book-background">
-                                <div class="book-details">
-                                   <font size="-1" >
-                                    <h3>The Paper Palace</h3>
-                                    <p>191 Page - Chapter 4 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover"><img src="/images/byrl-1.jpg"></div>
+                <h3 class="heading">Books you last read</h3>
+                <div class="button-next-prev">
+                    <div class="button-next"><button onclick="ScrollBooks('right')"><img src="images/slider arrow left.png"></button></div>
+                </div>
+                <div class="button-next-prev">
+                    <div class="button-prev"><button onclick="ScrollBooks('left')"><img src="images/slider arrow right.png"></button></div>
+                </div>   
+                <div class="horizontal-scroll" id="horizontal-scroll">
+                    <div class="card card-1">
+                        <div class="book-cover"><img src="images/byrl-1.jpg"></div>
+                         <div class="card-details">
+                            <h3>The Paper Palace</h3>
+                            <p>191 Page - Chapter 4 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <div class="book-cover"><img src="images/byrl-2.jpg"></div>
+                        <div class="card-details">
+                            <h3>Queenie</h3>
+                            <p>82 Page - Chapter 3 - Last Read</p>
+                         </div>
+                    </div>
+                    <div class="card card-3">
+                        <div class="book-cover"><img src="images/byrl-3.jpg"></div>
+                        <div class="card-details">
+                            <h3>The Lord Of The Rings</h3>
+                         <p>362 Page Chapter 9 Last Read</p>
+                         </div>
+                    </div>
+                    <div class="card card-4">
+                     <div class="book-cover"><img src="images/byrl-4.jpg"></div>
+                     <div class="card-details">
+                        <h3>To Kill A Mockingbird</h3>
+                        <p>Complete - Favourite</p>
+                     </div>
+                    </div>
+                    <div class="card card-5">
+                        <div class="book-cover"><img src="images/byrl-5.jpg"></div>
+                        <div class="card-details">
+                            <h3>The Hacienda</h3>
+                            <p>New purchase - Yet to read</p>
+                        </div>
+                    </div>
+                    <div class="card card-6">
+                        <div class="book-cover"><img src="images/byrl-6.jpg"></div>
+                        <div class="card-details">
+                            <h3>Trust</h3>
+                            <p>New purchase - Yet to read</p></div>
+                    </div>
+                    <div class="card card-7">
+                        <div class="book-cover"><img src="images/byrl-7.jpg"></div>
+                        <div class="card-details">
+                            <h3>How To Tell A Story</h3>
+                            <p>61 Page - Chapter 3 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card card-8">
+                        <div class="book-cover"><img src="images/byrl-8.jpg"></div>
+                        <div class="card-details">
+                            <h3>Little Sister</h3>
+                            <p>124 Page - Chapter 5 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card card-9">
+                        <div class="book-cover"><img src="images/byrl-9.jpg"></div>
+                        <div class="card-details">
+                            <h3>Okoye: To The People</h3>
+                            <p>70 Page - Chapter 3 - Last Read</p>
+                        </div>
+                    </div>
+                    <div class="card card-10">
+                        <div class="book-cover"><img src="images/byrl-10.jpg"></div>
+                        <div class="card-details">
+                            <h3>The Invisible Kingdom: Reimagining Chronic Illness</h3>
+                            <p>18 Page - Chapter 1  - Last Read</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+            <div class="new-books">
+                <h3 class="heading">New Releases</h3>
+                <div class="book-container">
+                    <div class="card-new">
+                        <div class="card-img-new">
+                            <img src="/images/book-1 cover.jpg" width="100px" height="150px" id="book-image">
+                            <h5 class="book-title">Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h5>
+                            <p class="author-new">Steven Rinella</p>
+                            <button type="button" class="genre-button">Parenting</button>
+                        </div>
+                        <div class="card-body new-1">
+                            <div class="content">
+                                <h5 class="book-title-flip" id="book-title">Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature<br>by Steven Rinella</h5>
+                                <p class="description">Outdoors expert Steven Rinella offers practical advice for getting kids engaged with nature in a muddy, thrilling, hands-on way. Living an outdoor lifestyle fosters an insatiable curiosity about the world around them, confidence and self-sufficiency, and a lifelong sense of stewardship of the natural world.</p>
+                                <p class="description">ISBN-13: 9780593129661</p>
+                                <div class="ratings">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <br>4,9 (142 reviews)
                                 </div>
+                                <p class="price" id="price">Price: <del>R411,68</del> R280,89</p>
+                                <button type="button" class="buy" href="/cart.html">Add to cart</button>
+                                <button type="button" class="like"href="">Wishlist</button>
                             </div>
                         </div>
-                        <div class="book-card1">
-                            <div class="book-background1">
-                                <div class="book-details1">
-                                   <font size="-1" >
-                                    <h3>Queenie</h3>
-                                    <p>82 Page - Chapter 3 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover1"><img src="/images/byrl-2.jpg"></div>
+                    </div>
+                    <div class="card-new">
+                        <div class="card-img-new">
+                            <img src="/images/book-2 cover.jpg" width="100px" height="150px" id="book-image">
+                            <h5 class="book-title">Finding Me: A Memoir</h5>
+                            <p class="author-new">Viola Davis</p>
+                            <button type="button" class="genre-button">Biographies</button>
+                        </div>
+                        <div class="card-body new-2">
+                            <div class="content">
+                                <h5 class="book-title-flip" id="book-title">Finding Me: A Memoir<br>by Viola Davis</h5>
+                                <p class="description">Finding Me tells the story of Viola, a young woman who ran away from her history until she made the life-changing decision to stop running and rediscover who she was before the world labeled her. The book is a type of love letter to oneself.</p>
+                                <p class="description">ISBN-13: 9780063037328</p>
+                                <div class="ratings">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <br>4,8 (2 399 reviews)
                                 </div>
+                                <p class="price" id="price">Price: <del>R459,02</del> R293,40</p>
+                                <button type="button" class="buy" href="/cart.html">Add to cart</button>
+                                <button type="button" class="like"href="">Wishlist</button>
                             </div>
                         </div>
-                        <div class="book-card2">
-                            <div class="book-background2">
-                                <div class="book-details2">
-                                   <font size="-1" >
-                                    <h3>The Lord Of The Rings</h3>
-                                    <p>362 Page Chapter 9 Last Read</p>
-                                    </font>
-                                    <div class="book-cover2"><img src="/images/byrl-3.jpg"></div>
+                    </div>
+                    <div class="card-new">
+                        <div class="card-img-new">
+                            <img src="/images/book-3 cover.jpg" width="100px" height="150px" id="book-image">
+                            <h5 class="book-title">This Will Not Pass: Trump, Biden, and the Battle for America's Future</h5>
+                            <p class="author-new">Jonathan Martin</p>
+                            <button type="button" class="genre-button">Politics</button>
+                        </div>
+                        <div class="card-body new-3">
+                            <div class="content">
+                                <h5 class="book-title-flip" id="book-title">This Will Not Pass: Trump, Biden, and the Battle for America's Future<br>by Jonathan Martin</h5>
+                                <p class="description">Book offers stunning, in-the-room account of an 18-month crisis in American democracy. Exposes degree to which two-party system has been strained to the point of disintegration. The book asks the vitally important question: Can American democracy, as we know it, ever work again?</p>
+                                <p class="description">ISBN-13: 9781982172480</p>
+                                <div class="ratings">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-half.png" width="10px">
+                                    <br>4,3 (671 reviews)
                                 </div>
+                                <p class="price" id="price">Price: <del>R474,86</del> R326,97</p>
+                                <button type="button" class="buy">Add to cart</button>
+                                <button type="button" class="like"href="">Wishlist</button>
                             </div>
                         </div>
-                        <div class="book-card3">
-                            <div class="book-background3">
-                                <div class="book-details3">
-                                    <font size="-1" >
-                                    <h3>To Kill A Mockingbird</h3>
-                                    <p>Complete - Favourite</p>
-                                    </font>
-                                    <div class="book-cover3"><img src="/images/byrl-4.jpg"></div>
+                    </div>
+                    <div class="card-new">
+                        <div class="card-img-new">
+                            <img src="/images/book-4 cover.jpg" width="100px" height="150px" id="book-image">
+                            <h5 class="book-title">22 Seconds (Women's Murder Club, 22)</h5>
+                            <p class="author-new">James Patterson</p>
+                            <button type="button" class="genre-button">Thriller</button>
+                        </div>
+                        <div class="card-body new-4">
+                            <div class="content">
+                                <h5 class="book-title-flip" id="book-title">22 Seconds (Women's Murder Club, 22)<br>by James Patterson</h5>
+                                <p class="description">Sergeant Lindsay Boxer's top informant tips her to a case that hits disturbingly close to home. All former cops have the same warning scrawled on their bodies:You talk, you die. Now it's her turn to choose between life and death.</p>
+                                <p class="description">ISBN-13: 9780316499378</p>
+                                <div class="ratings">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-half.png" width="10px">
+                                    <br>4,5 (5 838 reviews)
                                 </div>
+                                <p class="price" id="price">Price: <del>R459,18</del> R237,35</p>
+                                <button type="button" class="buy">Add to cart</button>
+                                <button type="button" class="like"href="">Wishlist</button>
                             </div>
                         </div>
-                        <div class="book-card4">
-                            <div class="book-background4">
-                                <div class="book-details4">
-                                   <font size="-1" >
-                                    <h3>The Hacienda</h3>
-                                    <p>New purchase - Yet to read</p>
-                                    </font>
-                                    <div class="book-cover4"><img src="/images/byrl-5.jpg"></div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="card-new">
+                        <div class="card-img-new">
+                            <img src="/images/book-5 cover.jpg" width="100px" height="150px" id="book-image">
+                            <h5 class="book-title">Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h5>
+                            <p class="author-new">Dav Pilkey</p>
+                            <button type="button" class="genre-button">Children's</button>
                         </div>
-                        <div class="book-card5">
-                            <div class="book-background5">
-                                <div class="book-details5">
-                                   <font size="-1" >
-                                    <h3>Trust</h3>
-                                    <p>New purchase - Yet to read</p>
-                                    </font>
-                                    <div class="book-cover5"><img src="/images/byrl-6.jpg"></div>
+                        <div class="card-body new-5">
+                            <div class="content">
+                                <h5 class="book-title-flip" id="book-title">Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man<br> by Dav Pilkey</h5>
+                                <p class="description">Dav Pilkey's mini comics showcase each baby frog's perspective and individual art style. Award-winning author and illustrator Dav Pilkey uses a variety of techniques to illustrate each frog's creative purpose. Readers of all ages will enjoy this fun, exciting, and purposeful graphic novel adventure.</p>
+                                <p class="description">ISBN-13: 9781338801941</p>
+                                <div class="ratings">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <img src="/images/star-full.png" width="10px">
+                                    <br>4,8 (1 737 reviews)
                                 </div>
-                            </div>
-                        </div>
-                        <div class="book-card6">
-                            <div class="book-background6">
-                                <div class="book-details6">
-                                   <font size="-1" >
-                                    <h3>How To Tell A Story</h3>
-                                    <p>61 Page - Chapter 3 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover6"><img src="/images/byrl-7.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card7">
-                            <div class="book-background7">
-                                <div class="book-details7">
-                                   <font size="-1" >
-                                    <h3>Little Sister</h3>
-                                    <p>124 Page - Chapter 5 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover7"><img src="/images/byrl-8.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card8">
-                            <div class="book-background8">
-                                <div class="book-details8">
-                                   <font size="-1" >
-                                    <h3>Okoye: To The People</h3>
-                                    <p>70 Page - Chapter 3 - Last Read</p>
-                                    </font>
-                                    <div class="book-cover8"><img src="/images/byrl-9.jpg"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="book-card9">
-                            <div class="book-background9">
-                                <div class="book-details9">
-                                   <font size="-1" >
-                                    <h3>The Invisible Kingdom: Reimagining Chronic Illness</h3>
-                                    <p>18 Page - Chapter 1  - Last Read</p>
-                                    </font>
-                                    <div class="book-cover9"><img src="/images/byrl-10.jpg"></div>
-                                </div>
+                                <p class="price" id="price">Price: <del>R205,68</del> R143,93</p>
+                                <button type="button" class="buy">Add to cart</button>
+                                <button type="button" class="like"href="">Wishlist</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <table class="new-books">
-                <table class="new-books">
-                    <tr><td colspan="5" class="heading"><h3>New Release</h3></td>
-                   </tr>
-                    <tr align="center">
-                        <td><img class="new-cover" src="/images/book-1 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-2 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-3 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-4 cover.jpg" width="91px" alt="icon"></td>
-                        <td><img class="new-cover" src="/images/book-5 cover.jpg" width="91px" alt="icon"></td>
-                     </tr>
-                    <tr align="justify center">
-                        <td class="book-title"><h5>Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h6><p class="author-new">Steven Rinella</p></td>
-                        <td class="book-title"><h5>Finding Me: A Memoir</h6><p class="author-new">Viola Davis</p></td>
-                        <td class="book-title"><h5>This Will Not Pass: Trump, Biden, and the Battle for America's Future</h6><p class="author-new">Jonathan Martin</p></td>
-                        <td class="book-title"><h5>22 Seconds (Women's Murder Club, 22)</h6><p class="author-new">James Patterson</p></td>
-                        <td class="book-title"><h5>Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h6><p class="author-new">Dav Pilkey</p></td>
-                    </tr>
-                    <tr align="justify">
-                        <td><button type="button" class="genre-button">Parenting</button></td>
-                        <td><button type="button" class="genre-button">Biographies</button></td>
-                        <td><button type="button" class="genre-button">Politics</button></td>
-                        <td><button type="button" class="genre-button">Thriller</button></td>
-                        <td><button type="button" class="genre-button">Children's</button></td>
-                    </tr>    
-            </table>
-            </table>
+           </div>
             <aside class="author-list">
                 <table class="author-list-table">
                     <tr><td colspan="2" class="heading"><h3>Famous Authors</h3></td></tr>
@@ -213,6 +292,8 @@
                         <td><b>Candice Carty-Williams</b><br>5 Books</td></tr>
                 </table>
             </aside>
-        <script type="text/javascript" src="/landing-page.js"></script>
+        <script type="text/javascript" src="/landing-page.js"></script>  
+        <script type="text/javascript" src="/cart.js"></script>  
     </body>
-    </html>
+</html>    
+
