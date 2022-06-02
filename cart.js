@@ -27,7 +27,7 @@ function ready() {
 }
 
 function purchaseClicked() {
-    alert('Successful! Thank you for your support')
+    alert('Thank you for your purchase')
     var cartItems = document.getElementsByClassName('cart-items')[0]
     while (cartItems.hasChildNodes()) {
         cartItems.removeChild(cartItems.firstChild)
@@ -53,9 +53,9 @@ function addToCartClicked(event) {
     var button = event.target
     var shopItem = button.parentElement.parentElement
     var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
-    var price = shopItem.getElementsByClassName('shop-item-price')[0].innerText
+    var price = shopItem.getElementById('shop-item-price')[0].innerText
     var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
-    addItemToCart(title||tit2, price, imageSrc)
+    addItemToCart(title, price, imageSrc)
     updateCartTotal()
 }
 
@@ -70,7 +70,7 @@ function addItemToCart(title, price, imageSrc) {
             return
         }
     }
-    var cartRowContents =`
+    var cartRowContents = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
@@ -91,13 +91,13 @@ function updateCartTotal() {
     var cartRows = cartItemContainer.getElementsByClassName('cart-row')
     var total = 0
     for (var i = 0; i < cartRows.length; i++) {
-        var cartRow = cartRows[i];
-        var priceElement = cartRow.getElementsByClassName('cart-price')[0];
-        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0];
-        var price = parseFloat(priceElement.innerText.replace('R', ''));
-        var quantity = quantityElement.value;
-        total = total + (price * quantity);
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('Price:R', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
     }
     total = Math.round(total * 100) / 100
-    document.getElementsByClassName('cart-total-price')[0].innerText = 'R' + total
+    document.getElementsByClassName('cart-total-price')[0].innerText = 'Price:R' + total
 }
