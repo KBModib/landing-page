@@ -1,162 +1,105 @@
-.book-container {
-    width: 110rem;
-    height: 350px;
-    background-color: #1f66a0;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    margin-top: 10px;
-}
-.book-cards {
-    border: 1px solid #8c1b9b;
-    width: 250px;
-    height: 450px;
-    display: flex;
-    margin-right: 5px;
-}
-.new-cover {
-        border-radius: 10px;
-        width: 100px;
-        height: 140px;
-        margin-left: 55px;
-        margin-top: 60px;
-        position: fixed;
-}
-.book-title {
-    font-family: 'Roboto', serif;
-    font-size: 10pt;
-    font-weight: bold;
-    margin-top: 210px;
-    margin-left: 25px;
-    position: relative;
-}
-.author-new {
-    font-family: 'Roboto', serif;
-    font-size: 11pt;
-    font-weight: lighter;
-    margin-left: 25px;
-    position: relative;
-}
-.genre-button {
-    border: 1px solid;
-    border-color: #861111 ;
-    border-radius: 30px;
-    background-color: #b8b7b7;
-    font-family: 'Roboto', serif;
-    font-size: 10pt;
-    font-weight: 600;
-    -webkit-text-fill-color: #363636;
-    margin-left: 60px;
-    
-}
-.face-2 {
-    background-color: rgb(228, 5, 228);
-    width: 500px;
-    height: 500px;
-    position: relative;
-    display: flex;
-    box-shadow: 20px 20px 20px rgba(255, 255, 255, 0.)
-}
-.book-cards .face-1:hover {
-    visibility: none;
-}
-.book-cards .face-2:hover {
-    visibility: visible;
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
 }
 
+function ready() {
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', removeCartItem)
+    }
+
+    var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+    for (var i = 0; i < quantityInputs.length; i++) {
+        var input = quantityInputs[i]
+        input.addEventListener('change', quantityChanged)
+    }
+
+    var addToCartButtons = document.getElementsByClassName('shop-item-button')
+    for (var i = 0; i < addToCartButtons.length; i++) {
+        var button = addToCartButtons[i]
+        button.addEventListener('click', addToCartClicked)
 
 
-html work 
+    }
 
- <div class="book-container">
-                    <div class="book-cards card-0">
-                        <div class="face 1">
-                            <img src="/images/book-1 cover.jpg" class="new-cover"/>
-                            <h5 class="book-title">Outdoor Kids in an Inside World: Getting Your Family Out of the House and Radically Engaged with Nature</h5>
-                            <p class="author-new">Steven Rinella</p>
-                            <button type="button" class="genre-button">Parenting</button>
-                        </div>
-                        <div class="face 2">
-                            <h5 class="book-title-face2"></h5>
-                            <p class="description"></p>
-                            <i class="rating"></i>
-                            <a type="button" class="buy" href="/cart.html"></a>
-                            <a type="button" class="like"href=""></a>
-                        </div>
-                    </div>
-                    <div class="book-cards card-01">
-                        <div class="face 1">
-                            <img src="/images/book-2 cover.jpg" class="new-cover"/>
-                            <h5 class="book-title">Finding Me: A Memoir</h5>
-                            <p class="author-new">Viola Davis</p>
-                            <button type="button" class="genre-button">Biographies</button>
-                        </div>
-                        <div class="face 2">
-                            <h5 class="book-title-face2"></h5>
-                            <p class="description"></p>
-                            <i class="rating"></i>
-                            <a type="button" class="buy" href="/cart.html"></a>
-                            <a type="button" class="like"href=""></a>
-                        </div>
-                    </div>
-                    <div class="book-cards card-02">
-                        <div class="face 1">
-                            <img src="/images/book-3 cover.jpg" class="new-cover"/>
-                            <h5 class="book-title">This Will Not Pass: Trump, Biden, and the Battle for America's Future</h5>
-                            <p class="author-new">Jonathan Martin</p>
-                            <button type="button" class="genre-button">Politics</button>
-                        </div>
-                    </div>
-                    <div class="book-cards card-03">
-                        <div class="face 1">
-                            <img src="/images/book-4 cover.jpg" class="new-cover"/>
-                            <h5 class="book-title">22 Seconds (Women's Murder Club, 22)</h5>
-                            <p class="author-new">James Patterson</p>
-                            <button type="button" class="genre-button">Thriller</button>
-                        </div>
-                        <div class="face 2">
-                            <h5 class="book-title-face2"></h5>
-                            <p class="description"></p>
-                            <i class="rating"></i>
-                            <a type="button" class="buy" href="/cart.html"></a>
-                            <a type="button" class="like"href=""></a>
-                        </div>
-                    </div>
-                    <div class="book-cards card-04">
-                        <div class="face 1">
-                            <img src="/images/book-5 cover.jpg" class="new-cover"/>
-                            <h5 class="book-title">Cat Kid Comic Club: On Purpose: A Graphic Novel (Cat Kid Comic Club #3): From the Creator of Dog Man</h5>
-                            <p class="author-new">Dav Pilkey</p>
-                            <button type="button" class="genre-button">Children's</button>
-                        </div>
-                        <div class="face 2">
-                            <h5 class="book-title-face2"></h5>
-                            <p class="description"></p>
-                            <i class="rating"></i>
-                            <a type="button" class="buy" href="/cart.html"></a>
-                            <a type="button" class="like"href=""></a>
-                        </div>
-                    </div>
-               </div>
+    document.getElementsByClassName('btn-purchase')[0].addEventListener('click', purchaseClicked)
+}
 
-               .card-body .bg .c1 {
-    background-image: linear-gradient(to the bottom, #17a094, #f1df52, #eb3737);
-    
+function purchaseClicked() {
+    alert('Thank you for your purchase')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    while (cartItems.hasChildNodes()) {
+        cartItems.removeChild(cartItems.firstChild)
+    }
+    updateCartTotal()
 }
-.card-body .bg .c2 {
-    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
 }
-.card-body .bg .c3 {
-    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+
+function quantityChanged(event) {
+    var input = event.target
+    if (isNaN(input.value) || input.value <= 0) {
+        input.value = 1
+    }
+    updateCartTotal()
 }
-.card-body .bg .c4 {
-    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+
+function addToCartClicked(event) {
+    var button = event.target
+    var shopItem = button.parentElement.parentElement
+    var title = shopItem.getElementsByClassName('shop-item-title')[0].innerText
+    var price = shopItem.getElementById('shop-item-price')[0].innerText
+    var imageSrc = shopItem.getElementsByClassName('shop-item-image')[0].src
+    addItemToCart(title, price, imageSrc)
+    updateCartTotal()
 }
-.card-body .bg .c5 {
-    background-image: linear-gradient(to the bottom, #17a094, #f1df52);
+
+function addItemToCart(title, price, imageSrc) {
+    var cartRow = document.createElement('div')
+    cartRow.classList.add('cart-row')
+    var cartItems = document.getElementsByClassName('cart-items')[0]
+    var cartItemNames = cartItems.getElementsByClassName('cart-item-title')
+    for (var i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i].innerText == title) {
+            alert('This item is already added to the cart')
+            return
+        }
+    }
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        <span class="cart-price cart-column">${price}</span>
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+    cartRow.getElementsByClassName('btn-danger')[0].addEventListener('click', removeCartItem)
+    cartRow.getElementsByClassName('cart-quantity-input')[0].addEventListener('change', quantityChanged)
+}
+
+function updateCartTotal() {
+    var cartItemContainer = document.getElementsByClassName('cart-items')[0]
+    var cartRows = cartItemContainer.getElementsByClassName('cart-row')
+    var total = 0
+    for (var i = 0; i < cartRows.length; i++) {
+        var cartRow = cartRows[i]
+        var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+        var quantityElement = cartRow.getElementsByClassName('cart-quantity-input')[0]
+        var price = parseFloat(priceElement.innerText.replace('R', ''))
+        var quantity = quantityElement.value
+        total = total + (price * quantity)
+    }
+    total = Math.round(total * 100) / 100
+    document.getElementsByClassName('cart-total-price')[0].innerText = 'R' + total
 }

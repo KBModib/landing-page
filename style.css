@@ -710,7 +710,14 @@ position: static;
 .book-description {
     height: 200px;
     width: 450px;
+    font-family: 'Roboto', sans-serif;
 
+}
+.card-text{
+    font-style: italic;
+}
+.card-title{
+    font-style: oblique;
 }
 .genre-button-cart {
     background-color: #b8b7b7;
@@ -737,17 +744,20 @@ position: static;
 }
 .cart-container {
     border: 1px solid transparent;
-    height: 250px;
+    height: 550px;
     border-radius: 20px;
     background-color: rgb(250, 205, 81, 0.699);
     box-shadow: 0 0 10px rgb(255, 174, 0);
+    overflow-y: auto;
 
 }
 .list-group {
-    margin-right: 100px;
+    margin-right: 95px;
+    margin-left: 20px;
 }
 .list-group li{
     list-style: none;
+    font-family: 'Roboto', sans-serif;
 }
 .book-description li {
     list-style: none;
